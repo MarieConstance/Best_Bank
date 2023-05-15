@@ -7,7 +7,7 @@ router.get("",(req,res)=>{
 
    res.render("index")
 })
-router.get("/espaceClient")
+router.get("/espaceClient"),(req))
 
 
 
