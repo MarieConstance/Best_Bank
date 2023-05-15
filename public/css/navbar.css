@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "philo";
+}
+header{
+   height: 100vh;
+   width: 100vw;
+   background-color: ;
+   background-size: cover;
+}
+.navbar{
+    position: absolute;
+    margin: 50px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+.navbar a{
+    color: white;
+}
