@@ -1,19 +1,15 @@
-const express=require('express')
+const express = require("express");
 
-const router=express.Router();
+const router = express.Router();
 
+router.get("/", (req, res) => {
+  res.render("index");
+});
+router.get("/espaceClient", (req, res) => {
+  res.render("espaceClient");
+});
+router.get("/connexion", (req, res) => {
+  res.render("connexion");
+});
 
-router.get("",(req,res)=>{
-
-   res.render("index")
-})
-router.get("/espaceClient",(req,res)=>{
-        res.render("espaceClient")
-})
-router.get("/connexion",(req,res)=>{
-        res.render("connexion")
-})
-
-
-
-module.exports= router
+module.exports = router;
