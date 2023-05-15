@@ -10,6 +10,8 @@ app.use(expressLayouts);
 
 app.use(express.static("public"));
 
+app.
+
 app.set("view engine", "ejs");
 app.use(" ",firstPage)
 
