@@ -1,17 +1,17 @@
 const express = require("express");
-const expressLayouts = require("express-ejs-layouts");
+// const expressLayouts = require("express-ejs-layouts");
 
 const firstPage= require("./routes/route")
 
 require("dotenv").config();
 const app = express();
 
-app.use(expressLayouts);
+// app.use(expressLayouts);
 
 app.use(express.static("public"));
 
 app.use(express.urlencoded({ extended: true }));
-app.use(" ",firstPage)
+app.use("/",firstPage)
 
 app.set("view engine", "ejs");
 
