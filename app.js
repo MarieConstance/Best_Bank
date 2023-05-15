@@ -10,10 +10,11 @@ app.use(expressLayouts);
 
 app.use(express.static("public"));
 
-app.
+app.use(express.urlencoded({ extended: true }));
+app.use(" ",firstPage)
 
 app.set("view engine", "ejs");
-app.use(" ",firstPage)
+
 
 app.listen(5000, () => {
   console.log("bienvenue nous somme connecter sur le port");
