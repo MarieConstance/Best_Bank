@@ -1,7 +1,8 @@
 const express = require("express");
 const cors = require("cors");
-
+var expressLayouts = require('express-ejs-layouts');
 const firstPage = require("./routes/route");
+app.use(expressLayouts);
 
 require("dotenv").config();
 const app = express();
