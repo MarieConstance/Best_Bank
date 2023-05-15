@@ -10,7 +10,9 @@ router.get("",(req,res)=>{
 router.get("/espaceClient",(req,res)=>{
         res.render("espaceClient")
 })
-
+router.get("/connexion",(req,res)=>{
+        res.render("connexion")
+})
 
 
 
