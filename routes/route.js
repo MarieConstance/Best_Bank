@@ -5,9 +5,9 @@ const router=express.Router();
 
 router.get("",(req,res)=>{
 
-   res.send("salut a tous")
+   res.render("index")
 })
-
+router.get("/espaceClient")
 
 
 
