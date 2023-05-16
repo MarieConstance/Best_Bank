@@ -15,6 +15,9 @@ router.get("/inscription", (req, res) => {
         res.render("inscription");
 
 });
+router.get("/espaceClientSolde",(req,res)=>{
+  res.render("espaceClientSolde")
+})
 
 router.get("/espaceChat",(req,res)=>{
         res.render("espaceChat");
