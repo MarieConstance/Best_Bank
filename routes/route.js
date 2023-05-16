@@ -23,4 +23,9 @@ router.get("/espaceChat",(req,res)=>{
         res.render("espaceChat");
 })
 
+
+router.get("/dashbordAcceuil",(req,res)=>{
+        res.render("dashbord/dashbordAcceuil");
+})
+
 module.exports = router;
