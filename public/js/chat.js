@@ -6,9 +6,11 @@ let sms = {
   imessage: "",
 };
 
-let reponses = [{ reMessage: "hi", reponse: "hello" },
-{ reMessage: "comment vous allez", reponse: "je vais bien" },
-{ reMessage: "quel est votre nom", reponse: "je suis un chatbox" }];
+let reponses = [
+  { reMessage: "hi", reponse: "hello" },
+  { reMessage: "comment vous allez", reponse: "je vais bien" },
+  { reMessage: "quel est votre nom", reponse: "je suis un chatbox" },
+];
 
 bouton.addEventListener("click", (e) => {
   e.preventDefault();
@@ -26,17 +28,22 @@ bouton.addEventListener("click", (e) => {
 });
 
 function demandeUtilisateur(demande) {
+    let date = new Date();
+  date=date.getHours() + ":" + date.getMinutes()+":"+date.getSeconds()
+  console.log(date);
   let contener = document.createElement("div");
   contener.style.textAlign = "right";
 
-  contener.innerHTML = `<p> you: ${demande}</p>`;
+  contener.innerHTML = `<p> you: ${demande}</p> <span>${date}</span>`;
 
   positionText.appendChild(contener);
 }
 
 function reponseServeur(usermessage) {
   let chatbox = "";
-
+  let date = new Date();
+  date=date.getHours() + ":" + date.getMinutes()+":"+date.getSeconds()
+  console.log(date);
   if (usermessage == "hi") {
     chatbox = "hello";
   } else {
@@ -44,10 +51,12 @@ function reponseServeur(usermessage) {
   }
 
   let resp = document.createElement("div");
-  resp.innerHTML = `<p>chatBox: ${chatbox}</p>`;
-setTimeout(()=>{
+    resp.className='resp'
+  resp.innerHTML = `<p>chatBox: ${chatbox}</p> 
+   <span>${date}</span>`
+  ;
+  setTimeout(() => {
     positionText.appendChild(resp);
-    positionText.scrollTop=positionText.scrollHeight
-},1000)
-  
+    positionText.scrollTop = positionText.scrollHeight;
+  }, 1000);
 }
