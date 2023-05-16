@@ -16,4 +16,8 @@ router.get("/inscription", (req, res) => {
 
 });
 
+router.get("/espaceChat",(req,res)=>{
+        res.render("espaceChat");
+})
+
 module.exports = router;
