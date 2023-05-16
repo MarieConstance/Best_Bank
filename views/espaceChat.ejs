@@ -8,6 +8,32 @@
     <link rel="stylesheet" href="/css/espaceChat.css" />
   </head>
   <body>
+    <main>
+        <p class="texte1"> Liste des Opérations</p>
+        <div class="operations">
+            <div class="icon solde shadow">
+                <img src="/images/wpf_bank-cards.png" alt="" srcset="">
+                <p>Consulter son solde</p>
+                
+            </div>
+            <div class="icon transfert shadow">
+                
+                <img src="/images/fa6-solid_money-bill-transfer.png" alt="" srcset="">
+                <p>Effectuer un Transfert</p>
+                
+            </div>
+            <div class="icon message shadow">
+                <img src="/images/subway_sms-3.png" alt="" srcset="">
+                <p>Envoyer un message à BestBank</p>
+            </div>
+        </div>
+
+        
+        <div class="div-form"></div>
+   
+    
+    
+    
     <div class="card">
       <div class="chat-header">Service client</div>
       <div class="chat-window">
@@ -18,11 +44,13 @@
           type="text"
           class="message-input"
           placeholder="Type your message here"
+          id="message"
         />
         <button class="send-button">Send</button>
       </div>
     </div>
-
-    <%- include("footer/footer") %>
+</main>
+<script src="/js/chat.js"></script>
+    
   </body>
 </html>
