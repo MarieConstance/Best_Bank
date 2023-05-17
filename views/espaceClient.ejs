@@ -4,16 +4,126 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../public/css/espaceClient.css">
+    <link rel="stylesheet" href="./css/espaceClient.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+   
     <title>Espace Client</title>
 </head>
 <body>
     <main>
-        <div class="caroussel">
-            <img src="../public/images/andre-taissin-5OUMf1Mr5pU-unsplash.jpg" alt="">
+        <p class="texte1"> Liste des Opérations</p>
+        <div class="operations">
+            <div class="card solde shadow">
+                <img src="/images/wpf_bank-cards.png" alt="" srcset="">
+                <p>Consulter son solde</p>
+                
+            </div>
+            <div class="card transfert shadow">
+                
+                <img src="/images/fa6-solid_money-bill-transfer.png" alt="" srcset="">
+                <p>Effectuer un Transfert</p>
+                
+            </div>
+            <div class="card message shadow">
+                <img src="/images/subway_sms-3.png" alt="" srcset="">
+                <p>Envoyer un message à BestBank</p>
+            </div>
         </div>
-        <div calss="operations"></div>
-        <div class="div-form"></div>
+
+        <p class="texte2">
+            <span>*</span> Veuillez remplir ce formulaire pour proceder a l’ouverture de vontre compte a BestBank
+        </p>
+
+   <!--                                          -->     
+        <div class="div-form">
+            <form class="form">
+                <p class="title">CREATION DU COMPTE BANCAIRE </p>
+                <!-- <p class="message">Signup now and get full access to our app. </p> -->
+                <div class="flex">
+                    <label>
+                        <input required="" placeholder="" type="text" class="input">
+                        <span>Nom</span>
+                    </label>
+            
+                    <label>
+                        <input required="" placeholder="" type="text" class="input">
+                        <span>Prenoms</span>
+                    </label>
+                </div>  
+
+                <div class="flex 2">
+                    <label>
+                        <input required="" placeholder="" type="text" class="input">
+                        <span>Date de naissance</span>
+                    </label>
+            
+                    <label>
+                        <input required="" placeholder="" type="text" class="input">
+                        <span>Fonction</span>
+                    </label>
+                </div>  
+                        
+                <label>
+                    <input required="" placeholder="" type="email" class="input">
+                    <span>Email</span>
+                </label> 
+                    
+                <label>
+                    <input required="" placeholder="" type="text" class="input">
+                    <span>Ville de résidence</span>
+                </label>
+                <label>
+                    <input required="" placeholder="" type="text" class="input">
+                    <span>Pays de résidence</span>
+                </label>
+                <div class="flex 3">
+                    <label>
+                        <input required="" placeholder="" type="text" class="input">
+                        <span>Nationalité</span>
+                    </label>
+                    <div class="sexe">
+                        <label>
+                            <input required="" placeholder="" type="radio" name="sexe">
+                            <span class="input">Homme</span>
+                        </label>
+
+                        <label>
+                            <input required="" placeholder="" type="radio" name="sexe">
+                            <span class="input">Femme</span>
+                        </label>
+                    </div>
+                    
+                    
+                </div>  
+
+                <div class="flex 4">
+                    <label>
+                        <input required="" placeholder="" type="number" class="input">
+                        <span>+225</span>
+                    </label>
+            
+                    <label>
+                        
+                        <select name="" id="" class="input">
+                            <option>Statut du compte</option>
+                            <option>2</option>
+                        </select>
+                    </label>
+                </div>  
+
+                <div class="flex 5">
+                
+            
+                    <label>
+                        <input required="" placeholder="" type="file" class="input">
+                        
+                    </label>
+                </div>  
+                <button class="submit">Submit</button>
+                <p class="signin">Already have an acount ? <a href="#">Signin</a> </p>
+            </form>
+        </div>
     </main>
     
 </body>

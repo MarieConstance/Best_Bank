@@ -1,6 +1,5 @@
 const express = require("express");
 const cors = require("cors");
-
 const firstPage = require("./routes/route");
 
 require("dotenv").config();

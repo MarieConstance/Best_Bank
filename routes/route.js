@@ -11,5 +11,12 @@ router.get("/espaceClient", (req, res) => {
 router.get("/connexion", (req, res) => {
   res.render("connexion");
 });
+router.get("/inscription", (req, res) => {
+        res.render("inscription");
+
+});
+router.get("/espaceClientSolde",(req,res)=>{
+  res.render("espaceClientSolde")
+})
 
 module.exports = router;
