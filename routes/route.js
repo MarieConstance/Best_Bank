@@ -22,6 +22,9 @@ router.get("/espaceClientSolde",(req,res)=>{
 router.get("/espaceChat",(req,res)=>{
         res.render("espaceChat");
 })
+router.get("/espaceDepot",(req,res)=>{
+  res.render("espaceDepot");
+})
 
 
 router.get("/dashbordAcceuil",(req,res)=>{

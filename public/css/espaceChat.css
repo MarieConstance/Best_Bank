@@ -1,26 +1,21 @@
-
-
-main{
-  height:100vh;
+main {
+  height: 100vh;
   width: 75%;
-  margin:auto;
- 
-  
+  margin: auto;
 }
-.texte1{
-  text-align:center;
+.texte1 {
+  text-align: center;
   font-size: 3.5rem;
 }
-.texte2{
-  text-align:center;
+.texte2 {
+  text-align: center;
 }
-.operations{
-  margin: 50px auto ;
-  width :auto;
+.operations {
+  margin: 50px auto;
+  width: auto;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  
 }
 
 .icon {
@@ -37,10 +32,9 @@ main{
   margin-top: 2rem;
 }
 .shadow {
-  box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1),
-              0 0  0 2px rgb(190, 190, 190),
-              0.3em 0.3em 1em rgba(0,0,0,0.3);
- }
+  box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.1), 0 0 0 2px rgb(190, 190, 190),
+    0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+}
 /**
 
 .card {
@@ -59,21 +53,15 @@ box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1),
 
 
 **/
-.icon img{
+.icon img {
   margin-left: 25%;
   margin-top: 1rem;
-  
 }
-.icon p{
+.icon p {
   text-align: center;
-  margin-top:1rem;
-  color: #B87410
+  margin-top: 1rem;
+  color: #b87410;
 }
-
-
-
-
-
 
 /* chatbox */
 .card {
@@ -142,4 +130,16 @@ box-shadow: inset 0 -3em 3em rgba(0,0,0,0.1),
   background-color: rgb(255, 255, 255);
   color: rgb(0, 0, 0);
   box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+}
+.img1 > p {
+  position: absolute;
+  top: 25%;
+  left: 28%;
+  font-size: 45px;
+  color: white;
+}
+.img1 > img {
+  width: 100%;
+  height: 55vh;
+  object-fit: cover;
 }
