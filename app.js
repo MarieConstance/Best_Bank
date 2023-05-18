@@ -11,6 +11,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use("/", firstPage);
 
+app.use((req,res)=>{
+
+  res.send("page 404  desole")
+})
+
 app.set("view engine", "ejs");
 
 app.listen(5000, () => {

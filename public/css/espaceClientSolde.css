@@ -1,12 +1,23 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-   
-}
+
+
+
 body{
     background-color: #DDEFF4;
 }
+
+.img1 > p {
+  position: absolute;
+  top: 25%;
+  left: 28%;
+  font-size: 45px;
+  color: white;
+}
+.img1 > img {
+  width: 100%;
+  height: 55vh;
+  object-fit: cover;
+}
+
 main{
     height:100vh;
     width: 75%;
@@ -19,7 +30,7 @@ main{
     font-size: 3.5rem;
 }
 .texte2{
-    text-align:center;
+    
 }
 .operations{
     margin: 50px auto ;
@@ -76,3 +87,87 @@ main{
     margin-top:1rem;
     color: #B87410
   }
+
+  .details{
+    display: flex;
+    justify-content: center;
+  }
+  td{
+    padding: 1rem
+  }
+.solde-card{
+  display: flex;
+  justify-content: center;
+}
+.title{
+  font-size: 50px;
+  text-align: center;
+  
+}
+.solde-title{
+  margin-bottom: 5rem;
+
+}
+
+
+  /**********************
+  **********************
+  CARDS******************/
+  .cards {
+    --background: linear-gradient(to left, #f7ba2b 0%, #B87410 100%);
+    width: 46.25rem;
+    height: 14.375rem;
+    padding: 5px;
+    border-radius: 1rem;
+    overflow: visible;
+    background: #f7ba2b;
+    background: var(--background);
+    position: relative;
+    z-index: 1;
+   }
+   
+   .cards::after {
+    position: absolute;
+    content: "";
+    top: 30px;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    transform: scale(0.8);
+    filter: blur(25px);
+    background: #f7ba2b;
+    background: var(--background);
+    transition: opacity .5s;
+   }
+   
+   .card-info {
+    --color: #075367;
+    background: var(--color);
+    color: var(--color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    border-radius: .7rem;
+   }
+   
+   .cards .title {
+    font-weight: bold;
+    letter-spacing: .1em;
+    
+   }
+   
+   /*Hover*/
+   .cards:hover::after {
+    opacity: 0;
+   }
+   
+   .cards:hover .card-info {
+    color: #fff;
+    transition: color 1s;
+   }
+   

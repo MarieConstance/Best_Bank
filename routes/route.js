@@ -19,4 +19,16 @@ router.get("/espaceClientSolde",(req,res)=>{
   res.render("espaceClientSolde")
 })
 
+router.get("/espaceChat",(req,res)=>{
+        res.render("espaceChat");
+})
+router.get("/espaceDepot",(req,res)=>{
+  res.render("espaceDepot");
+})
+
+
+router.get("/dashbordAcceuil",(req,res)=>{
+        res.render("dashbord/dashbordAcceuil");
+})
+
 module.exports = router;
