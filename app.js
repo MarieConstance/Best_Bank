@@ -13,7 +13,7 @@ app.use("/", firstPage);
 
 app.use((req,res)=>{
 
-  res.send("page 404  desole")
+  res.render("page404")
 })
 
 app.set("view engine", "ejs");

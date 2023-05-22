@@ -11,7 +11,7 @@
     text-align: center;
     align-items: center;
     border: 1px solid black;
-    background-color: rgba(23, 31, 40, 1);
+    background-color: #075367;
   }
   img {
     border: 1px solid black;
@@ -49,7 +49,7 @@
   .menu1 {
     padding: 25px;
     padding-bottom: 65px;
-    background-color: rgba(23, 31, 40, 1);
+    background-color: #075367;
     color: white;
   }
   .menu2 > p {
