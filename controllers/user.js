@@ -1,7 +1,7 @@
 const  user = require("../modele/utilisateur");
-module.exports={
 
- inscription: async(req,res)=>{
+
+ exports.inscription= async(req,res)=>{
     try {
         const login = await user.findEmail(req.body.email)
     if(login){
@@ -16,7 +16,7 @@ module.exports={
     },
 
 
- connexion:async(req,res)=>{
+ exports.connexion=async(req,res)=>{
     try {
         const logcon= await user.findCon(req.body.email,req.body.password)
   const authoken= await user.generateAuthTokenAndSave()
@@ -28,4 +28,4 @@ module.exports={
         res.status(400).send(error)
        }
     }
-}   
+  
