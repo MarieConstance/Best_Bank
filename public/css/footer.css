@@ -6,13 +6,13 @@
     list-style: none;
 } */
 body{
-    font-family: "montserrat";
+    font-family: 'Montserrat Alternates', sans-serif;
 }
 
 footer{
     width:100% ;
-    height: 15rem;
-    background-color: #3C342B;
+    height: 25rem;
+    background-color: #3c342be2;
 }
 
 .prligne{
@@ -23,32 +23,53 @@ footer{
     color: white;
 }
 .prligne h2{
-   
-    font-size: 1.4rem;
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    padding-bottom: 1.5rem;
 }
 .prligne h3{
-    line-height: 28px;
+    line-height: 2.5rem;
+    font-size: 1.2rem;
 }
 
 .deuxiemeligne{
-    display: flex;
-    justify-content: center;
     margin-top: 2rem;
 }
 
 .deuxiemeligne p{
     color: white;
     width: 50%;
+    
 }
 .logosvg{
     text-align: center;
-    border: 1px solid red;
-    width: 15rem;
-    justify-content: space-around;
-    margin-left: 25rem;
+    width: 20rem;
+    margin: auto;
+
 }
+.logosvg p{
+    margin-left: 5rem;
+    padding-bottom: 1rem;
+}
+
 .logosvg img{
     text-align: center;
     width: 2rem;
     height: 2rem;
+    margin-left: 1.4rem;
+}
+.traiblanc{
+    width: 100%;
+    height: 0.2rem;
+    background-color: rgba(255, 255, 255, 0.705);
+    margin-top: 1rem;
+
+}
+.pfoot{
+    text-align: center;
+    width: 100%;
+}
+.pfoot p{
+   margin: auto;
+   margin-top: 1rem;
 }
