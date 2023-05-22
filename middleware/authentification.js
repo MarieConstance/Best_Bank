@@ -2,6 +2,24 @@ const User= require("../modele/utilisateur")
 
 const jwt= require("jsonwebtoken")
 
+const multer  = require('multer')
+
+
+const upload= multer({storage:multer.diskStorage({
+    destination: function (req, file, cb) {
+        cb(null, './uploads')
+      },
+      filename: function (req, file, cb) {
+        const uniqueSuffix = Date.now()
+        cb(null, file.fieldname + '-' + uniqueSuffix+'.'+file.mimetype.split('/')[1])
+      }
+
+})
+
+})
+
+module.exports=upload;
+
 const authentification= async(req,res,next)=>{
   try {
     const authoken=req.header("AuthoriZation").replace("Bearer","")

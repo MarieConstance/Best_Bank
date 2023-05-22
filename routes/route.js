@@ -31,4 +31,17 @@ router.get("/dashbordAcceuil",(req,res)=>{
         res.render("dashbord/dashbordAcceuil");
 })
 
+router.post("/user/logout",(req,res)=>{
+  try{
+    req.user.authokens=req.user.authokens.filter((autthoken)=>{
+      return authoken.authoken != req.authoken  
+    })
+  }catch(e){
+    console.log()
+  }
+  await req.user.save()
+  res.send()
+
+})
+
 module.exports = router;
