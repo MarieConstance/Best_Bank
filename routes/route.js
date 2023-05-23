@@ -12,7 +12,7 @@ router.get("/", (req, res) => {
 router.post("/post/inscription",controllers.inscription)
 
 router.post("/post/connexion",controllers.connexion)
-
+    
 
 router.get("/espaceClient",authentification ,(req, res) => {
   res.render("espaceClient");

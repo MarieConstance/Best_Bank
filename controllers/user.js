@@ -21,9 +21,9 @@ exports.connexion = async (req, res) => {
   try {
     const logcon = await user.findCon(req.body.email, req.body.password);
     const authoken = await user.generateAuthTokenAndSave();
-
+    
     console.log(logcon);
-    res.redirect("espaceClient");
+    res.redirect("/espaceClient");
   } catch (error) {
     console.log("cklnez", error);
     res.status(400).send(error);

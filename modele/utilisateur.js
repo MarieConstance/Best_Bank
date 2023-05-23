@@ -47,9 +47,8 @@ const utilisateur = new Schema({
 utilisateur.methods.generateAuthTokenAndSave=async function(){
   const authoken=jwt.sign({ _id:this._id.tostring() }, 'foo');
    this.authokens.push({authoken})
-await this.save()
-    return authoken
-   
+    await this.save()
+      return authoken
 }
 
 
@@ -70,7 +69,7 @@ utilisateur.statics.findCon= async (email,password)=>{
     const user = await User.findOne({email:email})
     console.log(user);
     if(!user) throw new error ('erreur email n existe pas')
-    const ispasswordvalid = await bcrypt.compare(password, User.password)
+    const ispasswordvalid = await bcrypt.compare(password, user.password)
     if (!ispasswordvalid) throw new Error('erreur password n existe pas')
     return user;
 }
