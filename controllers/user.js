@@ -13,7 +13,7 @@ const  user = require("../modele/utilisateur");
           console.log(error);
         res.status(400).send(error)
        } 
-    },
+    }
 
 
  exports.connexion=async(req,res)=>{

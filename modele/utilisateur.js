@@ -69,6 +69,7 @@ utilisateur.methods.generateAuthTokenAndSave=async function(){
 
 
 
+
 // fonction pour verifier l'email a l'inscription
 utilisateur.statics.findEmail = async (email) => {
 
