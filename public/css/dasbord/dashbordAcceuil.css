@@ -2,8 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: 'Montserrat Alternates', sans-serif;
+    
   }
+  body{
+    background-color: #E3F2F7;
+  }
+  
   
   header {
     padding-top: 50px;
@@ -12,12 +17,13 @@
     align-items: center;
     border: 1px solid black;
     background-color: #075367;
+    width: 120%;
   }
   img {
-    border: 1px solid black;
+    
     border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    width: 200px;
+    height: 200px;
   }
   .item2 > img {
     border: 1px solid black;
@@ -61,36 +67,49 @@
   }
   h1 {
     text-align: center;
-    padding-bottom: 3%;
+    padding-bottom: 5rem;
+    font-size: 2rem;
   }
   
   .box {
     display: flex;
     gap: 25px;
+    margin: auto;
+    flex-wrap: wrap;
+    margin-bottom: 5rem;
     margin-left: 12%;
+    margin-right: 5rem;
+    justify-content: space-around;
+    width: 70%;
   }
   .box_item > i {
-    font-size: 50px;
+    font-size: 55px;
     text-align: center;
+    align-items: center;
+    color: white;
   }
   .box_item1 {
     padding: 15%;
     text-align: 55%;
     font-size: 25px;
+    align-items: center;
+    color: white;
   }
   
   .box_item {
     display: flex;
     padding: 0.8rem;
     border: 2px solid black;
-    width: 300px;
+    width: 400px;
     border-radius: 3px;
     text-align: center;
-    height: 150px;
-  background-color: rgba(253, 193, 102, 1);
+    height: 230px;
+    background-color: #B87410;
     border: transparent;
     box-shadow: 1px 1px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 6px;
+    align-items: center;
+    margin-left: 5rem;
   }
   p > i {
     font-size: 2.5rem;
@@ -134,6 +153,7 @@
   a {
     text-decoration: none;
     color: white;
+    font-size: 1.5rem;
   }
   /* super admin */
   

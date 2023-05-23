@@ -28,6 +28,9 @@ router.get("/espaceDepot", (req, res) => {
 });
 
 router.get("/dashbordAcceuil",controllers.dashbordAcceuil);
+router.get("/dashbordAdmin",(req, res) => {
+  res.render("dashbordAdmin");
+});
 
 router.post("/user/logout",controllers.logout);
 
