@@ -8,12 +8,12 @@ const { Schema } = mongoose;
 const utilisateur = new Schema({
     nom: {
         type: String,
-        require: true,
+        required: true,
         trim:true
     },
     email: {
         type: String,
-        require: true,
+        required: true,
         validate: {
             validator: validator.isEmail,
             message: 'Le champ email doit être une adresse email valide.',
@@ -21,7 +21,7 @@ const utilisateur = new Schema({
     },
     number:{
         type: Number,
-        require: true,
+        required: true,
         validate: {
             validator: validator.isNumeric,
             message: 'Le champ number doit être un nombre.',
@@ -38,7 +38,7 @@ const utilisateur = new Schema({
     },
     authokens:[{
         authoken:{
-            type:string,
+            type: String,
             required:true
         }
     }]
@@ -47,13 +47,13 @@ const utilisateur = new Schema({
 
 // suprimer le motdepasse de lutilisateur et le le thoken afin de ne pas le rendre accessible
 
-utilisateur.methods.toJSON()=function(){
- const user=this.toObject()
+// utilisateur.methods.toJSON()=function(){
+//  const user=this.toObject()
 
- delete user.authokens;
- delete user.password;
- return user
-}
+//  delete user.authokens;
+//  delete user.password;
+//  return user
+// }
 
 //methode pour faire l'authentification et sauvegarder
 
