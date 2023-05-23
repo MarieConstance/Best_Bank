@@ -1,93 +1,4 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
-}
-body{
-    font-family: 'Montserrat' ;
-}
-header{
-   height: 10vh;
-   width: 100%;
-   background-color:#075367 ;
-   background-size: cover;
-   position: fixed;
-   z-index: 1;
-}
-.navbar{
-    position: absolute;
-    display: flex;
-    justify-content: space-between;
-   
-    box-sizing: border-box;
-}
-.navbar a{
-    color: white;
-    font-size: 1.2rem;
-}
-.navbar a:hover{
-    border-bottom: 5px solid #B87410;
-}
-.navbar .logo{
-    width: 7rem;
-    height: 5.5rem;
-    margin-left: 5rem; 
-    
-}
-.navbar .navlinks ul {
-    display: flex;
-    margin-top: 30px;
 
-}
-.navbar .navlinks ul li{
-    margin: 0 60px;
-    
-}
-.navbar .navlinks ul li.active a{
-    color: #B87410;
-    
-}
-
-.menuburger{
-    display: none;
-    width: 2.5rem;
-    height: 2.5rem;
-    margin-top: 15px;
-    margin-right: 30px;
-}
-
-@media screen and (max-width: 1000px){
-    .menuburger{
-        display: block;
-    }
-    .navlinks{
-       position: absolute;
-       width: 50%;
-       height: 70vh;
-       top: 0;
-       left: 0;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       background-color: #075367;
-       margin-left: 32rem;
-       margin-top: 5rem;
-     
-    }
-    .navlinks ul{
-       display: flex;
-       flex-direction: column;
-       align-items: center;
-       
-    }
-
-    .navbar .navlinks ul li{
-        margin:  25px 0;
-        font-size: 2rem;
-    }
-}
 *{
     margin: 0;
     padding: 0;
@@ -148,20 +59,22 @@ header{
 }
 
 @media screen and (max-width: 1000px){
+    .navbar{
+        padding: 0;
+    }
     .menuburger{
         display: block;
     }
     .navlinks{
        position: absolute;
-       width: 50%;
-       height: 70vh;
+       width: 100%;
+       height: 100vh;
        top: 0;
        left: 0;
        display: flex;
        justify-content: center;
        align-items: center;
        background-color: #075367;
-       margin-left: 32rem;
        margin-top: 5rem;
      
     }

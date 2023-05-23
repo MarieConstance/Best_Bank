@@ -12,7 +12,7 @@
    
     <header>
         <nav class="navbar">
-            <a href="#"class><img src="/images/Minimal Professional Economics Bank Logo.png" alt="" class="logo"></a>
+            <a href="#"class="lien"><img src="/images/Minimal Professional Economics Bank Logo.png" alt="" class="logo"></a>
             <div class="navlinks">
                 <ul>
                     <li class="active"><a href="#">ACCEUIL</a></li>
@@ -28,5 +28,15 @@
         </nav>
     </header>
     
+
+    <script>
+
+        const menuburger = document.querySelector(".menuburger")
+        const navlinks = document.querySelector(".navlinks")
+
+        menuburger.addEventListener('click', ()=>{
+            navlinks.classList.toggle('mobile-menu')
+        })
+    </script>
 </body>
 </html>
