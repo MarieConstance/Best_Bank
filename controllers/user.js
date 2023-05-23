@@ -13,7 +13,7 @@ const  user = require("../modele/utilisateur");
           console.log(error);
         res.status(400).send(error)
        } 
-    },
+    }
 
 
  exports.connexion=async(req,res)=>{
@@ -29,3 +29,19 @@ const  user = require("../modele/utilisateur");
        }
     }
   
+    exports.logout= async(req,res)=>{
+      try{
+        req.user.authokens=req.user.authokens.filter((autthoken)=>{
+          return authoken.authoken != req.authoken  
+        })
+      }catch(e){
+        console.log()
+      }
+      await req.user.save()
+      res.send()
+    
+    }
+
+    exports.dashbordAcceuil=(req, res) => {
+      res.render("dashbord/dashbordAcceuil");
+    }
