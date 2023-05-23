@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat Alternates', sans-serif;
+    
+  }
+  body{
+    background-color: #E3F2F7;
+  }
+  
+  
+  header {
+    padding-top: 50px;
+    height: 100vh;
+    text-align: center;
+    align-items: center;
+    border: 1px solid black;
+    background-color: #075367;
+    width: 120%;
+  }
+  img {
+    
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+  }
+  .item2 > img {
+    border: 1px solid black;
+    width: 30px;
+    height: 30px;
+  }
+  .i2 {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    margin-left: 15px;
+    border-radius: 50%;
+    border: transparent;
+    background-color: greenyellow;
+    transform: translate(210px);
+  }
+  .menu1 > p {
+    padding-top: 15px;
+    background-color: rgba(23, 31, 40, 1);
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 5fr;
+  }
+  section {
+    padding-top: 80px;
+    height: 500px;
+  }
+  .menu1 {
+    padding: 25px;
+    padding-bottom: 65px;
+    background-color: #075367;
+    color: white;
+  }
+  .menu2 > p {
+    padding-bottom: 55px;
+    display: flex;
+    gap: 5%;
+    padding: 25px;
+    color: white;
+  }
+  h1 {
+    text-align: center;
+    padding-bottom: 5rem;
+    font-size: 2rem;
+  }
+  
+  .box {
+    display: flex;
+    gap: 25px;
+    margin: auto;
+    flex-wrap: wrap;
+    margin-bottom: 5rem;
+    margin-left: 12%;
+    margin-right: 5rem;
+    justify-content: space-around;
+    width: 70%;
+  }
+  .box_item > i {
+    font-size: 55px;
+    text-align: center;
+    align-items: center;
+    color: white;
+  }
+  .box_item1 {
+    padding: 15%;
+    text-align: 55%;
+    font-size: 25px;
+    align-items: center;
+    color: white;
+  }
+  
+  p > i {
+    font-size: 2.5rem;
+    align-items: center;
+    text-align: center;
+  }
+  
+  
+.i {
+    width: 15px;
+    height: 15px;
+    margin-left: 15px;
+    border-radius: 50%;
+    border: transparent;
+    background-color: greenyellow;
+}
+  
+a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.5rem;
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 80%;
+    margin: auto;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #075367;
+    line-height: 4rem;
+    font-size: 1.5rem;
+  }
+  
+  tr:hover {background-color: #B87410;color: white;}
+
+.non{
+   color: black; 
+   margin-left: 1rem;
+}
+
+
+
+  /* super admin */
+  

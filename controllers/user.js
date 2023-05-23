@@ -41,6 +41,9 @@ const  user = require("../modele/utilisateur");
       res.send()
     
     }
+    exports.dashbordAdmin=async(req,res)=>{
+      res.render("dashbord/dashbordAdmin")
+    }
 
     exports.dashbordAcceuil=(req, res) => {
       res.render("dashbord/dashbordAcceuil");
