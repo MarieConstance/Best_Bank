@@ -28,5 +28,15 @@
         </nav>
     </header>
     
+
+    <script>
+
+        const menuburger = document.querySelector(".menuburger")
+        const navlinks = document.querySelector(".navlinks")
+
+        menuburger.addEventListener('click', ()=>{
+            navlinks.classList.toggle('mobile-menu')
+        })
+    </script>
 </body>
 </html>
