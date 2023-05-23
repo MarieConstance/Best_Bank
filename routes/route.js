@@ -1,5 +1,7 @@
 const express = require("express");
 
+const controllers = require("../controllers/user");
+
 const router = express.Router();
 
 router.get("/", (req, res) => {
@@ -12,36 +14,21 @@ router.get("/connexion", (req, res) => {
   res.render("connexion");
 });
 router.get("/inscription", (req, res) => {
-        res.render("inscription");
-
+  res.render("inscription");
 });
-router.get("/espaceClientSolde",(req,res)=>{
-  res.render("espaceClientSolde")
-})
+router.get("/espaceClientSolde", (req, res) => {
+  res.render("espaceClientSolde");
+});
 
-router.get("/espaceChat",(req,res)=>{
-        res.render("espaceChat");
-})
-router.get("/espaceDepot",(req,res)=>{
+router.get("/espaceChat", (req, res) => {
+  res.render("espaceChat");
+});
+router.get("/espaceDepot", (req, res) => {
   res.render("espaceDepot");
-})
+});
 
+router.get("/dashbordAcceuil",controllers.dashbordAcceuil);
 
-router.get("/dashbordAcceuil",(req,res)=>{
-        res.render("dashbord/dashbordAcceuil");
-})
-
-router.post("/user/logout",(req,res)=>{
-  try{
-    req.user.authokens=req.user.authokens.filter((autthoken)=>{
-      return authoken.authoken != req.authoken  
-    })
-  }catch(e){
-    console.log()
-  }
-  await req.user.save()
-  res.send()
-
-})
+router.post("/user/logout",controllers.logout);
 
 module.exports = router;
