@@ -15,10 +15,10 @@
             <a href="#"class="lien"><img src="/images/Minimal Professional Economics Bank Logo.png" alt="" class="logo"></a>
             <div class="navlinks">
                 <ul>
-                    <li class="active"><a href="#">ACCEUIL</a></li>
-                    <li><a href="#">ESPACE CLIENT</a></li>
-                    <li><a href="#">À PROPOS</a></li>
-                    <li><a href="#">CONNEXION</a></li>
+                    <li class="active"><a href="index">ACCEUIL</a></li>
+                    <li><a href="espaceClient">ESPACE CLIENT</a></li>
+                    <li><a href="">À PROPOS</a></li>
+                    <li><a href="connexion">CONNEXION</a></li>
                 </ul>
 
             </div>
@@ -31,11 +31,11 @@
 
     <script>
 
-        const menuburger = document.querySelector(".menuburger")
-        const navlinks = document.querySelector(".navlinks")
+        const menuHamburger = document.querySelector(".menuburger")
+        const navLinks = document.querySelector(".navlinks")
 
-        menuburger.addEventListener('click', ()=>{
-            navlinks.classList.toggle('mobile-menu')
+        menuHamburger.addEventListener('click', ()=>{
+            navLinks.classList.toggle('mobile-menu')
         })
     </script>
 </body>
