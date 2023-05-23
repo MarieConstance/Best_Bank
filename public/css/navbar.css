@@ -22,6 +22,7 @@ header{
     justify-content: space-between;
     width: 100%;
     box-sizing: border-box;
+    z-index: 1;
 }
 .navbar a{
     color: white;
@@ -58,9 +59,12 @@ header{
     margin-right: 30px;
 }
 
+
+
 @media screen and (max-width: 1000px){
     .navbar{
         padding: 0;
+        z-index: 1;
     }
     .menuburger{
         display: block;
@@ -75,18 +79,25 @@ header{
        justify-content: center;
        align-items: center;
        background-color: #075367;
-       margin-top: 5rem;
+       margin-top: 3rem;
+       margin-left: -100%;
+       transition: all 0.5s ease;
      
     }
+    .navlinks.mobile-menu{
+        margin-left: 0;
+    }
+
     .navlinks ul{
        display: flex;
        flex-direction: column;
        align-items: center;
-       
+       margin-bottom: 5rem;
     }
 
     .navbar .navlinks ul li{
         margin:  25px 0;
         font-size: 2rem;
+        margin-bottom: 2rem;
     }
 }

@@ -109,3 +109,22 @@ width: 90%;
 }
 
 
+@media screen and (max-width: 1000px){
+    .cardblanc{
+        height: 60rem;
+        margin: auto;
+        margin-top: 3rem;
+        
+    }
+
+    .cardblanc h2{
+        font-size: 1.5rem;
+    }
+    .bestbank p{
+        font-size: 1.3rem;
+    }
+    .bestbank1 p{
+        font-size: 1.3rem;
+    }
+}
+
