@@ -40,5 +40,6 @@ router.get("/dashbordAcceuil",controllers.dashbordAcceuil);
 router.get("/dashbordAdmin",controllers.dashbordAdmin);
 
 router.post("/user/logout",controllers.logout);
+router.post('/espaceClientSolde/Vcompte', multer, controllers.createThing)
 
 module.exports = router;
