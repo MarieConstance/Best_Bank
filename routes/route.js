@@ -2,6 +2,9 @@ const express = require("express");
 
 const controllers = require("../controllers/user");
 const authentification=require("../middleware/authentification")
+const imgComptes= require("../modele/imageCompte")
+
+const upload=require("../middleware/multer")
 
 const router = express.Router();
 
@@ -12,6 +15,18 @@ router.get("/", (req, res) => {
 router.post("/post/inscription",controllers.inscription)
 
 router.post("/post/connexion",controllers.connexion)
+
+
+router.post('/post/upload',upload.single('file'),async(req,res)=>{
+   try {
+    console.log(req.body);
+    const imgCte=  new imgComptes(req.body,req.file)
+      await imgCte.save()}
+   catch(e){
+console.log(e);
+   }
+
+});
     
 
 router.get("/espaceClient", (req, res) => {
@@ -49,3 +64,5 @@ router.get("/AdminCompt",controllers.AdminCompt)
 
 
 module.exports = router;
+
+

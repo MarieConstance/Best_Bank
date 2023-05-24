@@ -17,7 +17,7 @@ app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use("/", firstPage);
-
+app.use('/uploads',express.static('./uploads'))
 
 
 app.use((req,res)=>{

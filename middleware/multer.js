@@ -1,5 +1,4 @@
 
-const User= require("../modele/utilisateur")
 const multer  = require('multer')
 
 
@@ -13,5 +12,6 @@ const upload= multer({storage:multer.diskStorage({
       }
 
 })
-
 })
+
+module.exports=upload
