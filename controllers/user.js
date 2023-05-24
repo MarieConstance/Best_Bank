@@ -7,8 +7,8 @@ exports.inscription = async (req, res) => {
     
     if (!login) {
       const logEmail = new user(req.body);
+      const authoKen= await logEmail.generateAuthTokenAndSave()
       
-      const log = await logEmail.save();
       res.redirect("/connexion");
     }
 
@@ -21,7 +21,7 @@ exports.inscription = async (req, res) => {
 exports.connexion = async (req, res) => {
   try {
     const logcon = await user.findCon(req.body.email, req.body.password);
-     
+     const authoKen= await logcon.generateAuthTokenAndSave();
       console.log(logcon ,":salut");
       res.redirect("/espaceClient"); 
   } catch (error) {
