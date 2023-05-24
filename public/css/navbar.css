@@ -23,11 +23,8 @@ header{
     justify-content: space-between;
     width: 100%;
     box-sizing: border-box;
-<<<<<<< HEAD
-    
-=======
     z-index: 1;
->>>>>>> dedbb76c274db6e89fa74e3a7befb5c5629dd9ae
+
 }
 .navbar a{
     color: white;
