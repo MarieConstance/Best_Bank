@@ -1,13 +1,20 @@
 const express = require("express");
 
 const controllers = require("../controllers/user");
+const authentification=require("../middleware/authentification")
 
 const router = express.Router();
 
 router.get("/", (req, res) => {
   res.render("index");
 });
-router.get("/espaceClient", (req, res) => {
+
+router.post("/post/inscription",controllers.inscription)
+
+router.post("/post/connexion",controllers.connexion)
+    
+
+router.get("/espaceClient",authentification ,(req, res) => {
   res.render("espaceClient");
 });
 router.get("/connexion", (req, res) => {
