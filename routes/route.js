@@ -30,5 +30,6 @@ router.get("/espaceDepot", (req, res) => {
 router.get("/dashbordAcceuil",controllers.dashbordAcceuil);
 
 router.post("/user/logout",controllers.logout);
+router.post('/espaceClientSolde/Vcompte', multer, controllers.createThing)
 
 module.exports = router;
