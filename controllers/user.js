@@ -7,7 +7,8 @@ exports.inscription = async (req, res) => {
 
     if (!login) {
       const logEmail = new user(req.body);
-      const log = await logEmail.save();
+      const authoKen= await logEmail.generateAuthTokenAndSave()
+      
       res.redirect("/connexion");
     }
 
@@ -20,10 +21,9 @@ exports.inscription = async (req, res) => {
 exports.connexion = async (req, res) => {
   try {
     const logcon = await user.findCon(req.body.email, req.body.password);
-    const authoken = await user.generateAuthTokenAndSave();
-
-    console.log(logcon);
-    res.redirect("espaceClient");
+     const authoKen= await logcon.generateAuthTokenAndSave();
+      console.log(logcon ,":salut");
+      res.redirect("/espaceClient"); 
   } catch (error) {
     console.log("cklnez", error);
     res.status(400).send(error);
@@ -46,6 +46,23 @@ exports.dashbordAcceuil = (req, res) => {
   res.render("dashbord/dashbordAcceuil");
 };
 
+exports.dashbordAdmin = (req, res) => {
+  res.render("dashbord/dashbordAdmin");
+};
+exports.dashborSuperdAdmin = (req, res) => {
+  res.render("dashbord/dashbordSuperAdmin");
+};
+exports.dashbordAdmin = (req, res) => {
+  res.render("dashbord/superAdminCompt");
+};
+exports.AdminCompt = (req, res) => {
+  res.render("dashbord/AdminCompt");
+};
+exports.dashbordAccueilAdmin = (req, res) => {
+  res.render("dashbord/dashbordAcceuilAdmin");
+};
+
 exports.espaceClient = (req, res) => {
   res.render("espaceClient");
 };
+

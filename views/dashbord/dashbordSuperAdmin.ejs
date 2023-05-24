@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Montserrat+Alternates:wght@300&family=Poppins:wght@200;300&display=swap" rel="stylesheet">
     <title>Document</title>
 
-    <link rel="stylesheet" href="/css/dasbord/dashbordAdmin.css" />
+    <link rel="stylesheet" href="/css/dasbord/dashbordSuperAdmin.css" />
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
@@ -26,16 +26,16 @@
         <div class="menu2">
           <p>
             <i class="fa-sharp fa-solid fa-house"></i>
-            <a href="#">TABLEAU</a>
+            <a href="dashbordAcceuil">TABLEAU</a>
           </p>
           <p>
             <i class="fa-sharp fa-solid fa-coins"></i>
-            <a href="dashbordAdmin">ADMINISTRATEURS</a>
+            <a href="#">ADMINISTRATEURS</a>
           </p>
 
           <p>
-            <i class="fa-solid fa-user"></i>
-            <a href="">SUPER ADMIN</a>
+            <i class="fa-solid fa-file-invoice-dollar"></i>
+            <a href="dashbordAdmin">COMPTES</a>
           </p>
         
           <p>
@@ -46,38 +46,72 @@
       </header>
 
       <section>
-        <h1>TABLEAU DE TOUS LES COMPTES</h1>
+        <h1>LISTE DES ADMININSTRATEURS</h1>
 
         <table>
           <tr>
             <th> Nom</th>
             <th>Prenoms</th>
-            <th>Numéro de Compte</th>
-            <th>Date</th>
+            <th>Numéro de Téléphone</th>
+            <th>Adresse Email</th>
+            <th>Mot De Passe</th>
             <th>Action</th>
           </tr>
           <tr>
             <td>Goa</td>
             <td>Marie</td>
             <td>084457146</td>
-            <td>10-02-2023</td>
+            <td>hokyvbn@gmail.com</td>
+            <td>marie1234</td>
             <td><a href="" class="non"><i class="fa-solid fa-pen-to-square"></i></a><a href="" class="non"><i class="fa-solid fa-trash" ></i></a></td>
           </tr>
           <tr>
             <td>Beugre</td>
             <td>Desnos</td>
             <td>00008756</td>
-            <td>17-05-2023</td>
+            <td>camarate@gmail.com</td>
+            <td>marie1234</td>
             <td><a href="" class="non"><i class="fa-solid fa-pen-to-square"></i></a><a href="" class="non"><i class="fa-solid fa-trash" ></i></a></td>
           </tr>
           <tr>
             <td>Kesse</td>
             <td>Wihlem</td>
             <td>097633356</td>
-            <td>10-08-2023</td>
+            <td>marieconstance@gmail.com</td>
+            <td>marie1234</td>
             <td><a href="" class="non"><i class="fa-solid fa-pen-to-square"></i></a><a href="" class="non"><i class="fa-solid fa-trash" ></i></a></td>
           </tr>
         </table>
+        <h2 class="titreformu">Formulaire d'ajout de nouvel Administrateur</h2>
+        <div class="login-box">
+          
+          <form>
+            <div class="user-box">
+              <input type="text" name="" required="">
+              <label>Nom</label>
+            </div>
+            <div class="user-box">
+              <input type="text" name="" required="">
+              <label>Prenoms</label>
+            </div>
+            <div class="user-box">
+              <input type="tel" name="" required="">
+              <label>Téléphone</label>
+            </div>
+            <div class="user-box">
+              <input type="email" name="" required="">
+              <label>Adresse Email</label>
+            </div>
+            <div class="user-box">
+              <input type="password" name="" required="">
+              <label>Mot De Passe</label>
+            </div><center>
+            <a href="#">
+                   ENREGISTRER
+               <span></span>
+            </a></center>
+          </form>
+        </div>
        
       </section>
     </div>

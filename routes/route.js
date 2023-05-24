@@ -14,7 +14,7 @@ router.post("/post/inscription",controllers.inscription)
 router.post("/post/connexion",controllers.connexion)
     
 
-router.get("/espaceClient",authentification ,(req, res) => {
+router.get("/espaceClient", (req, res) => {
   res.render("espaceClient");
 });
 router.get("/connexion", (req, res) => {
@@ -34,12 +34,18 @@ router.get("/espaceDepot", (req, res) => {
   res.render("espaceDepot");
 });
 
-router.get("/dashbordAcceuil",controllers.dashbordAcceuil);
+router.get("/dashbordSuperAdmin",controllers.dashborSuperdAdmin);
 
+
+router.get("/dashbordAcceuil",controllers.dashbordAcceuil);
 
 router.get("/dashbordAdmin",controllers.dashbordAdmin);
 
 router.post("/user/logout",controllers.logout);
+
+router.get("/dashbordAcceuilAdmin",controllers.dashbordAccueilAdmin)
+
+router.get("/AdminCompt",controllers.AdminCompt)
 
 
 module.exports = router;
