@@ -4,7 +4,7 @@ exports.inscription = async (req, res) => {
   try {
     const login = await user.findEmail(req.body.email);
     console.log("login : ", login);
-
+    
     if (!login) {
       const logEmail = new user(req.body);
       

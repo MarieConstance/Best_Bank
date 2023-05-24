@@ -1,6 +1,7 @@
 const express = require("express");
-
+const multer =require("../middleware/multer")
 const controllers = require("../controllers/user");
+const compteControl = require("../controllers/compte")
 const authentification=require("../middleware/authentification")
 
 const router = express.Router();
@@ -12,7 +13,7 @@ router.get("/", (req, res) => {
 router.post("/post/inscription",controllers.inscription)
 
 router.post("/post/connexion",controllers.connexion)
-router.post("/post/compte"),
+router.post("/post/compte",compteControl.envoyer)
     
 
 router.get("/espaceClient", (req, res) => {
