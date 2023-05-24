@@ -2,6 +2,8 @@ const express = require("express");
 const cors = require("cors");
 const firstPage = require("./routes/route");
 
+
+
 require("dotenv").config();
 const connectDB  =require('./config/db')
 const app = express();
@@ -16,7 +18,7 @@ mongoose.connect('mongodb+srv://koffAnz:0778827674@cluster0.2njrjif.mongodb.net/
 
 app.use(express.json())
 
-//connectDB()
+connectDB()
 
 app.use(cors());
 app.use(express.static("public"));

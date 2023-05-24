@@ -12,6 +12,7 @@ router.get("/", (req, res) => {
 router.post("/post/inscription",controllers.inscription)
 
 router.post("/post/connexion",controllers.connexion)
+router.post("/post/compte"),
     
 
 router.get("/espaceClient",authentification ,(req, res) => {
@@ -37,6 +38,6 @@ router.get("/espaceDepot", (req, res) => {
 router.get("/dashbordAcceuil",controllers.dashbordAcceuil);
 
 router.post("/user/logout",controllers.logout);
-router.post('/espaceClientSolde/Vcompte', multer, controllers.createThing)
+
 
 module.exports = router;
