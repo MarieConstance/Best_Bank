@@ -48,7 +48,7 @@ const utilisateur = new Schema(
 //methode pour faire l'authentification et sauvegarder
 
 utilisateur.methods.generateAuthTokenAndSave = async function () {
-  const authoken = jwt.sign({ _id: this._id.tostring() }, "foo");
+  const authoken = jwt.sign({ _id: this._id.toString() }, "foo");
   this.authokens.push({ authoken });
   await this.save();
   return authoken;
