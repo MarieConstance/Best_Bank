@@ -36,10 +36,10 @@ exports.logout = async (req, res) => {
       return authoken.authoken != req.authoken;
     });
   } catch (e) {
-    console.log();
+    console.log(e);
   }
   await req.user.save();
-  res.send();
+  res.send("salut");
 };
 
 exports.dashbordAcceuil = (req, res) => {

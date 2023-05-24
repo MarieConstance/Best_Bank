@@ -68,7 +68,7 @@ utilisateur.statics.findEmail = async (email) => {
 utilisateur.statics.findCon= async (email,password)=>{
     const user = await User.findOne({email:email})
     console.log(user);
-    if(!user) throw new error ('erreur email n existe pas')
+    if(!user) throw new Error('erreur email n existe pas')
     const ispasswordvalid = await bcrypt.compare(password, user.password)
     if (!ispasswordvalid) throw new Error('erreur password n existe pas')
     return user;
