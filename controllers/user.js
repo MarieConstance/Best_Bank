@@ -1,4 +1,5 @@
 const user = require("../modele/utilisateur");
+const adminDash=require("../modele/compteDashbord")
 
 exports.inscription = async (req, res) => {
   try {
@@ -14,6 +15,37 @@ exports.inscription = async (req, res) => {
 
   } catch (error) {
     console.log(error);
+    res.status(400).send(error);
+  }
+};
+exports.inscriptionDasbord=async (req, res) => {
+  try {
+    const admin = await adminDash.findEmail(req.body.email);
+    console.log("login : ", login);
+
+    if (!login) {
+      const logEmail = new adminDash({...req.body,role:"admin"});
+      const authoKen= await logEmail.generateAuthTokenAndSave()
+      
+      res.redirect("/connexion");
+    }
+
+  } catch (error) {
+    console.log(error);
+    res.status(400).send(error);
+  }
+};
+exports.conDashbord = async (req, res) => {
+  try {
+    const logcon = await adminDash.findCon(req.body.email, req.body.password);
+     const authoKen= await logcon.generateAuthTokenAndSave();
+     if(logcon.role==="admin"){
+      res.redirect("/dashbord/dashbordAdmin")
+     }
+      console.log(logcon ,":salut");
+      res.redirect("/dashbord/dashbordSuperAdmin"); 
+  } catch (error) {
+    console.log("cklnez", error);
     res.status(400).send(error);
   }
 };
