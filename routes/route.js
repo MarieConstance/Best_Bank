@@ -15,7 +15,7 @@ router.post("/post/connexion",controllers.connexion)
 router.post("/post/compte"),
     
 
-router.get("/espaceClient",authentification ,(req, res) => {
+router.get("/espaceClient", (req, res) => {
   res.render("espaceClient");
 });
 router.get("/connexion", (req, res) => {
