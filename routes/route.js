@@ -2,6 +2,10 @@ const express = require("express");
 
 const controllers = require("../controllers/user");
 const authentification=require("../middleware/authentification")
+const controller=require("../controllers/compte")
+
+
+const upload=require("../middleware/multer")
 
 const router = express.Router();
 
@@ -12,9 +16,12 @@ router.get("/", (req, res) => {
 router.post("/post/inscription",controllers.inscription)
 
 router.post("/post/connexion",controllers.connexion)
+
+
+router.post('/post/upload',controller.compteUtilisateur);
     
 
-router.get("/espaceClient",authentification ,(req, res) => {
+router.get("/espaceClient", (req, res) => {
   res.render("espaceClient");
 });
 router.get("/connexion", (req, res) => {
@@ -34,9 +41,20 @@ router.get("/espaceDepot", (req, res) => {
   res.render("espaceDepot");
 });
 
+router.get("/dashbordSuperAdmin",controllers.dashborSuperdAdmin);
+
+
 router.get("/dashbordAcceuil",controllers.dashbordAcceuil);
 
+router.get("/dashbordAdmin",controllers.dashbordAdmin);
+
 router.post("/user/logout",controllers.logout);
-router.post('/espaceClientSolde/Vcompte', multer, controllers.createThing)
+
+router.get("/dashbordAcceuilAdmin",controllers.dashbordAccueilAdmin)
+
+router.get("/AdminCompt",controllers.AdminCompt)
+
 
 module.exports = router;
+
+
