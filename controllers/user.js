@@ -76,7 +76,7 @@ exports.logout = async (req, res) => {
 
 
 exports.AdminCompt = (req, res) => {
- const compte= await 
+ 
   res.render("dashbord/AdminCompt");
 };
 

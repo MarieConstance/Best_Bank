@@ -21,7 +21,7 @@ router.post("/post/connexion",controllers.connexion)
 router.post('/post/upload',controller.compteUtilisateur);
     
 
-router.get("/espaceClient", (req, res) => {
+router.get("/espaceClient",authentification, (req, res) => {
   res.render("espaceClient");
 });
 router.get("/connexion", (req, res) => {
@@ -55,6 +55,8 @@ router.get("/AcceuilAdmin",controllers.dashbordAccueilAdmin)
 router.get("/AdminCompt",controllers.AdminCompt)
 
 
+
 module.exports = router;
+
 
 
