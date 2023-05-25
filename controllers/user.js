@@ -74,24 +74,32 @@ exports.logout = async (req, res) => {
   res.send("salut");
 };
 
-exports.dashbordAcceuil = (req, res) => {
+exports.AcceuilSuperAdmin = (req, res) => {
   res.render("dashbord/AcceuilSuperAdmin");
 };
 
 exports.dashbordAdmin = (req, res) => {
   res.render("dashbord/dashbordAdmin");
 };
-exports.dashborSuperdAdmin = (req, res) => {
-  res.render("dashbord/dashbordSuperAdmin");
+exports.listeAdmin = (req, res) => {
+  res.render("dashbord/listeAdmin");
 };
-exports.dashbordAdmin = (req, res) => {
+exports.superAdminCompt = (req, res) => {
   res.render("dashbord/superAdminCompt");
 };
 exports.AdminCompt = (req, res) => {
   res.render("dashbord/AdminCompt");
 };
-exports.dashbordAccueilAdmin = (req, res) => {
+exports.AcceuilAdmin = (req, res) => {
   res.render("dashbord/AcceuilAdmin");
+};
+
+exports.updateCompt = (req, res) => {
+  res.render("dashbord/updateCompt");
+};
+
+exports.connexionAdmins = (req, res) => {
+  res.render("dashbord/connexionAdmins");
 };
 
 exports.espaceClient = (req, res) => {

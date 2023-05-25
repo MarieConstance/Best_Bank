@@ -41,18 +41,24 @@ router.get("/espaceDepot", (req, res) => {
   res.render("espaceDepot");
 });
 
-router.get("/dashbordSuperAdmin",controllers.dashborSuperdAdmin);
+router.get("/listeAdmin",controllers.listeAdmin);
 
 
-router.get("/AcceuilSuperAdmin",controllers.dashbordAcceuil);
+router.get("/AcceuilSuperAdmin",controllers.AcceuilSuperAdmin);
 
 router.get("/dashbordAdmin",controllers.dashbordAdmin);
 
 router.post("/user/logout",controllers.logout);
 
-router.get("/AcceuilAdmin",controllers.dashbordAccueilAdmin)
+router.get("/AcceuilAdmin",controllers.AcceuilAdmin)
 
 router.get("/AdminCompt",controllers.AdminCompt)
+
+router.get("/superAdminCompt",controllers.superAdminCompt)
+
+router.get("/updateCompt",controllers.updateCompt)
+
+router.get("/connexionAdmins",controllers.connexionAdmins)
 
 
 module.exports = router;
