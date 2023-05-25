@@ -74,6 +74,7 @@ exports.logout = async (req, res) => {
   res.send("salut");
 };
 
+<<<<<<< HEAD
 
 exports.AdminCompt = (req, res) => {
  
@@ -120,11 +121,43 @@ exports.dashbordAdmin = (req, res) => {
 };
 exports.dashbordAcceuil = (req, res) => {
   res.render("dashbord/dashbordAcceuil");
+=======
+exports.AcceuilSuperAdmin = (req, res) => {
+  res.render("dashbord/AcceuilSuperAdmin");
+>>>>>>> 40c33298746a9d585b634d856f2cb42972511ca0
 };
 
 exports.dashbordAdmin = (req, res) => {
   res.render("dashbord/dashbordAdmin");
 };
+<<<<<<< HEAD
 exports.dashborSuperdAdmin = (req, res) => {
   res.render("dashbord/dashbordSuperAdmin");
 };
+=======
+exports.listeAdmin = (req, res) => {
+  res.render("dashbord/listeAdmin");
+};
+exports.superAdminCompt = (req, res) => {
+  res.render("dashbord/superAdminCompt");
+};
+exports.AdminCompt = (req, res) => {
+  res.render("dashbord/AdminCompt");
+};
+exports.AcceuilAdmin = (req, res) => {
+  res.render("dashbord/AcceuilAdmin");
+};
+
+exports.updateCompt = (req, res) => {
+  res.render("dashbord/updateCompt");
+};
+
+exports.connexionAdmins = (req, res) => {
+  res.render("dashbord/connexionAdmins");
+};
+
+exports.espaceClient = (req, res) => {
+  res.render("espaceClient");
+};
+
+>>>>>>> 40c33298746a9d585b634d856f2cb42972511ca0
