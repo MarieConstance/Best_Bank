@@ -54,6 +54,11 @@ exports.connexion = async (req, res) => {
   try {
     const logcon = await user.findCon(req.body.email, req.body.password);
     const authoKen = await logcon.generateAuthTokenAndSave();
+
+      if( logcon.authokens.authoken){
+        const Deconnect="Deconnexion"
+        res.redirect("/espaceClient",Deconnect);
+      }
     console.log(logcon, ":salut");
     res.redirect("/espaceClient");
   } catch (error) {
@@ -65,7 +70,7 @@ exports.connexion = async (req, res) => {
 exports.logout = async (req, res) => {
   try {
     req.user.authokens = req.user.authokens.filter((authoken) => {
-      return authoken.authoken != req.authoken;
+      return authoken.authoken !== req.authoken;
     });
   } catch (e) {
     console.log(e);
