@@ -1,6 +1,7 @@
 const express = require("express");
 const cors = require("cors");
 const firstPage = require("./routes/route");
+const path = require("path")
 
 require("dotenv").config();
 const connectDB  =require('./config/db')
@@ -10,6 +11,10 @@ const app = express();
 app.use(express.json())
 
 connectDB()
+
+
+
+app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
 app.use(cors());
 app.use(express.static("public"));

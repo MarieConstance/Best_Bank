@@ -1,6 +1,7 @@
 const express = require("express");
-
+const multer =require("../middleware/multer")
 const controllers = require("../controllers/user");
+const compteControl = require("../controllers/compte")
 const authentification=require("../middleware/authentification")
 const controller=require("../controllers/compte")
 
@@ -16,9 +17,7 @@ router.get("/", (req, res) => {
 router.post("/post/inscription",controllers.inscription)
 
 router.post("/post/connexion",controllers.connexion)
-
-
-router.post('/post/upload',controller.compteUtilisateur);
+router.post("/post/compte",compteControl.envoyer)
     
 
 router.get("/espaceClient", (req, res) => {
