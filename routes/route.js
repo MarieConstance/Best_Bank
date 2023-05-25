@@ -44,13 +44,13 @@ router.get("/espaceDepot", (req, res) => {
 router.get("/dashbordSuperAdmin",controllers.dashborSuperdAdmin);
 
 
-router.get("/dashbordAcceuil",controllers.dashbordAcceuil);
+router.get("/AcceuilSuperAdmin",controllers.dashbordAcceuil);
 
 router.get("/dashbordAdmin",controllers.dashbordAdmin);
 
 router.post("/user/logout",controllers.logout);
 
-router.get("/dashbordAcceuilAdmin",controllers.dashbordAccueilAdmin)
+router.get("/dAcceuilAdmin",controllers.dashbordAccueilAdmin)
 
 router.get("/AdminCompt",controllers.AdminCompt)
 
