@@ -79,57 +79,35 @@ exports.logout = async (req, res) => {
   res.send("salut");
 };
 
-
-exports.AdminCompt = (req, res) => {
- 
-  res.render("dashbord/AdminCompt");
-};
-
-
-exports.espaceClient = (req, res) => {
-  res.render("espaceClient");
-};
-
-
-
-exports.compteUtilisateur = async(req,res)=>{
-    try {
-     console.log(req.body);
-     const imgCte=  new imgComptes(req.body)
-       await imgCte.save()}
-    catch(e){
- console.log(e);
-    }
- 
- }
-
- exports.getCompte = async(req,res)=>{
-
-    try{
-        const read= await user.find({});
-        res.render()
-    }catch (e){
-        res.status(400).send(e)
-    }
-
-
- }
-
-//  dashbord  admin et superAdmin
-
-exports.dashbordAccueilAdmin = (req, res) => {
-  res.render("dashbord/dashbordAcceuilAdmin");
-};
-exports.dashbordAdmin = (req, res) => {
-  res.render("dashbord/superAdminCompt");
-};
-exports.dashbordAcceuil = (req, res) => {
-  res.render("dashbord/dashbordAcceuil");
+exports.AcceuilSuperAdmin = (req, res) => {
+  res.render("dashbord/AcceuilSuperAdmin");
 };
 
 exports.dashbordAdmin = (req, res) => {
   res.render("dashbord/dashbordAdmin");
 };
-exports.dashborSuperdAdmin = (req, res) => {
-  res.render("dashbord/dashbordSuperAdmin");
+exports.listeAdmin = (req, res) => {
+  res.render("dashbord/listeAdmin");
 };
+exports.superAdminCompt = (req, res) => {
+  res.render("dashbord/superAdminCompt");
+};
+exports.AdminCompt = (req, res) => {
+  res.render("dashbord/AdminCompt");
+};
+exports.AcceuilAdmin = (req, res) => {
+  res.render("dashbord/AcceuilAdmin");
+};
+
+exports.updateCompt = (req, res) => {
+  res.render("dashbord/updateCompt");
+};
+
+exports.connexionAdmins = (req, res) => {
+  res.render("dashbord/connexionAdmins");
+};
+
+exports.espaceClient = (req, res) => {
+  res.render("espaceClient");
+};
+

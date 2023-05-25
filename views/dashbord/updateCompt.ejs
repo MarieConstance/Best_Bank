@@ -1,49 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/espaceClient.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
-    <title>Espace Client</title>
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Montserrat+Alternates:wght@300&family=Poppins:wght@200;300&display=swap" rel="stylesheet">
+    <title>Document</title>
 
-    <%-include("navbar/navbar") %>
-    <div class="img1">
-        <img src="/images/andre-taissin-5OUMf1Mr5pU-unsplash.jpg" alt="">
-        <p>Cher client nous vous accompagnons avec précision ...</p>
-    </div>
-    <main>
-        <p class="texte1"> Liste des Opérations</p>
-        <div class="operations">
-            <div class="card solde shadow">
-                <img src="/images/wpf_bank-cards.png" alt="" srcset="">
-                <a href="espaceClientSolde"><p>Consulter son solde</p></a>
-                
-            </div>
-            <div class="card transfert shadow">
-                
-                <img src="/images/fa6-solid_money-bill-transfer.png" alt="" srcset="">
-                <a href="espaceDepot"><p>Effectuer un Transfert</p></a>
-                
-            </div>
-            <div class="card message shadow">
-                <img src="/images/subway_sms-3.png" alt="" srcset="">
-                <a href="espaceChat"><p>Envoyer un message à BestBank</p></a>
-            </div>
+    <link rel="stylesheet" href="/css/dasbord/updateCompt.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="menu1">
+          <img src="/images/Minimal Professional Economics Bank Logo.png" alt="" />
         </div>
 
-        <p class="texte2">
-            <span>*</span> Veuillez remplir ce formulaire pour proceder a l’ouverture de vontre compte a BestBank
-        </p>
+        <div class="menu2">
+          <p>
+            <i class="fa-sharp fa-solid fa-house"></i>
+            <a href="AcceuilAdmin">TABLEAU</a>
+          </p>
+          <p>
+            <i class="fa-solid fa-file-invoice-dollar"></i>
+            <a href="AdminCompt">COMPTES</a>
+          </p>
+        
+          <p>
+            <i class="fa-solid fa-right-to-bracket"></i>
+            <a href="#" id="deconnexion">DÉCONNEXION</a>
+          </p>
+        </div>
+      </header>
 
-   <!--                                          -->     
+      <section>
+        <h1>*  Veillez remplir ce formulaire pour procéder à la modification du compte</h1>
+
         <div class="div-form">
             <form class="form"  method="post" action="/post/upload" enctype="multipart/form-data">
-                <p class="title">CREATION DU COMPTE BANCAIRE </p>
+                <p class="title">MODIFICATION DU COMPTE BANCAIRE </p>
                 <!-- <p class="message">Signup now and get full access to our app. </p> -->
                 <div class="flex">
                     <label>
@@ -108,8 +110,6 @@
                         <input  placeholder="" type="number" class="input" name="phone_number">
                         <span>+225</span>
                     </label>
-            
-                    
                 </div>  
 
                 <div class="flex 5">
@@ -121,10 +121,10 @@
                     </label>
                 </div>  
                 <button class="submit">Submit</button>
-                <p class="signin">Already have an acount ? <a href="#">Signin</a> </p>
+               
             </form>
-        </div>
-    </main>
-    <%-include("footer/footer") %>
-</body>
+       
+      </section>
+    </div>
+  </body>
 </html>
