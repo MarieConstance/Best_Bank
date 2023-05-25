@@ -27,7 +27,10 @@ console.log(e);
    }
 
 });
-    
+
+
+
+
 
 router.get("/espaceClient", (req, res) => {
   res.render("espaceClient");

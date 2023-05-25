@@ -32,6 +32,10 @@ const utilisateur = new Schema(
         },
       },
     ],
+    role: {
+      type: String,
+      default: "user",
+    },
   },
   { timestamps: true }
 );
@@ -52,7 +56,7 @@ utilisateur.methods.generateAuthTokenAndSave = async function () {
   this.authokens.push({ authoken });
   await this.save();
   return authoken;
-}
+};
 
 // fonction pour verifier l'email a l'inscription
 utilisateur.statics.findEmail = async (email) => {

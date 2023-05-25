@@ -7,11 +7,10 @@ exports.inscription = async (req, res) => {
 
     if (!login) {
       const logEmail = new user(req.body);
-      const authoKen= await logEmail.generateAuthTokenAndSave()
-      
+      const authoKen = await logEmail.generateAuthTokenAndSave();
+
       res.redirect("/connexion");
     }
-
   } catch (error) {
     console.log(error);
     res.status(400).send(error);
@@ -21,9 +20,9 @@ exports.inscription = async (req, res) => {
 exports.connexion = async (req, res) => {
   try {
     const logcon = await user.findCon(req.body.email, req.body.password);
-     const authoKen= await logcon.generateAuthTokenAndSave();
-      console.log(logcon ,":salut");
-      res.redirect("/espaceClient"); 
+    const authoKen = await logcon.generateAuthTokenAndSave();
+    console.log(logcon, ":salut");
+    res.redirect("/espaceClient");
   } catch (error) {
     console.log("cklnez", error);
     res.status(400).send(error);
