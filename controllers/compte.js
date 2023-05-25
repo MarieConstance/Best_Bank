@@ -1,13 +1,24 @@
-const Compte = require('../modele/compte');
-const fs = require("fs");
+const imgComptes= require("../modele/imageCompte")
+
+exports.compteUtilisateur = async(req,res)=>{
+    try {
+     console.log(req.body);
+     const imgCte=  new imgComptes(req.body)
+       await imgCte.save()}
+    catch(e){
+ console.log(e);
+    }
+ 
+ }
+
+ exports.getCompte = async(req,res)=>{
+
+    try{
+        const read= await user.find({});
+        res.render()
+    }catch (e){
+        res.status(400).send(e)
+    }
 
 
-
-exports.envoyer = (req, res, next)=>{
-    const compte = new Compte({...req.body,imageUrl: `${req.protocol}://${req.get("host")}/images/${req.filename}`})
-
-    
-    compte.save()
-        .then(()=>res.status(201).json({message:"Objet crée"}))
-        .catch(error=>res.status(400).json({error}))
-}
+ }
