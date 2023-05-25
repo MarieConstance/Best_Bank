@@ -60,9 +60,12 @@ router.get("/updateCompt",controllers.updateCompt)
 
 router.get("/connexionAdmins",controllers.connexionAdmins)
 
+router.delete("/delete/:id",controller.deleteAdminCompte)
+
 
 
 module.exports = router;
+
 
 
 

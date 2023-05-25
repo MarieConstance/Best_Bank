@@ -79,6 +79,8 @@ exports.logout = async (req, res) => {
   res.send("salut");
 };
 
+// compte admin
+
 exports.AcceuilSuperAdmin = (req, res) => {
   res.render("dashbord/AcceuilSuperAdmin");
 };
@@ -92,8 +94,11 @@ exports.listeAdmin = (req, res) => {
 exports.superAdminCompt = (req, res) => {
   res.render("dashbord/superAdminCompt");
 };
-exports.AdminCompt = (req, res) => {
-  res.render("dashbord/AdminCompt");
+exports.AdminCompt = async (req, res) => {
+    
+const compte=  await imgComptes.find({})
+
+  res.render("dashbord/AdminCompt",{compte});
 };
 exports.AcceuilAdmin = (req, res) => {
   res.render("dashbord/AcceuilAdmin");

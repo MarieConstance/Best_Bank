@@ -11,14 +11,10 @@ exports.compteUtilisateur = async(req,res)=>{
  
  }
 
- exports.getCompte = async(req,res)=>{
 
-    try{
-        const read= await user.find({});
-        res.render()
-    }catch (e){
-        res.status(400).send(e)
-    }
+exports.deleteAdminCompte=async(req,res)=>{
+const id=req.param.id
 
-
- }
+await imgComptes.findByIdAndDelete(id,req.body)
+res.redirect("/dashbord/AdminCompt")
+}
