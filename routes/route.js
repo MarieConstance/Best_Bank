@@ -2,7 +2,8 @@ const express = require("express");
 
 const controllers = require("../controllers/user");
 const authentification=require("../middleware/authentification")
-const imgComptes= require("../modele/imageCompte")
+const controller=require("../controllers/compte")
+
 
 const upload=require("../middleware/multer")
 
@@ -17,20 +18,8 @@ router.post("/post/inscription",controllers.inscription)
 router.post("/post/connexion",controllers.connexion)
 
 
-router.post('/post/upload',upload.single('file'),async(req,res)=>{
-   try {
-    console.log(req.body);
-    const imgCte=  new imgComptes(req.body,req.file)
-      await imgCte.save()}
-   catch(e){
-console.log(e);
-   }
-
-});
-
-
-
-
+router.post('/post/upload',controller.compteUtilisateur);
+    
 
 router.get("/espaceClient", (req, res) => {
   res.render("espaceClient");
@@ -52,9 +41,19 @@ router.get("/espaceDepot", (req, res) => {
   res.render("espaceDepot");
 });
 
+router.get("/dashbordSuperAdmin",controllers.dashborSuperdAdmin);
+
+
 router.get("/dashbordAcceuil",controllers.dashbordAcceuil);
 
+router.get("/dashbordAdmin",controllers.dashbordAdmin);
+
 router.post("/user/logout",controllers.logout);
+
+router.get("/dashbordAcceuilAdmin",controllers.dashbordAccueilAdmin)
+
+router.get("/AdminCompt",controllers.AdminCompt)
+
 
 module.exports = router;
 
