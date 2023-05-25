@@ -20,7 +20,7 @@ router.post("/post/connexion",controllers.connexion)
 router.post("/post/compte",compteControl.envoyer)
     
 
-router.get("/espaceClient", (req, res) => {
+router.get("/espaceClient",authentification, (req, res) => {
   res.render("espaceClient");
 });
 router.get("/connexion", (req, res) => {
@@ -43,17 +43,19 @@ router.get("/espaceDepot", (req, res) => {
 router.get("/dashbordSuperAdmin",controllers.dashborSuperdAdmin);
 
 
-router.get("/dashbordAcceuil",controllers.dashbordAcceuil);
+router.get("/AcceuilSuperAdmin",controllers.dashbordAcceuil);
 
 router.get("/dashbordAdmin",controllers.dashbordAdmin);
 
 router.post("/user/logout",controllers.logout);
 
-router.get("/dashbordAcceuilAdmin",controllers.dashbordAccueilAdmin)
+router.get("/AcceuilAdmin",controllers.dashbordAccueilAdmin)
 
 router.get("/AdminCompt",controllers.AdminCompt)
 
 
+
 module.exports = router;
+
 
 

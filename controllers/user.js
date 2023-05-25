@@ -1,5 +1,6 @@
 const user = require("../modele/utilisateur");
 const adminDash=require("../modele/compteDashbord")
+const imgComptes= require("../modele/imageCompte")
 
 exports.inscription = async (req, res) => {
   try {
@@ -8,11 +9,10 @@ exports.inscription = async (req, res) => {
     
     if (!login) {
       const logEmail = new user(req.body);
-      const authoKen= await logEmail.generateAuthTokenAndSave()
-      
+      const authoKen = await logEmail.generateAuthTokenAndSave();
+
       res.redirect("/connexion");
     }
-
   } catch (error) {
     console.log(error);
     res.status(400).send(error);
@@ -53,9 +53,9 @@ exports.conDashbord = async (req, res) => {
 exports.connexion = async (req, res) => {
   try {
     const logcon = await user.findCon(req.body.email, req.body.password);
-     const authoKen= await logcon.generateAuthTokenAndSave();
-      console.log(logcon ,":salut");
-      res.redirect("/espaceClient"); 
+    const authoKen = await logcon.generateAuthTokenAndSave();
+    console.log(logcon, ":salut");
+    res.redirect("/espaceClient");
   } catch (error) {
     console.log("cklnez", error);
     res.status(400).send(error);
@@ -74,6 +74,50 @@ exports.logout = async (req, res) => {
   res.send("salut");
 };
 
+
+exports.AdminCompt = (req, res) => {
+ 
+  res.render("dashbord/AdminCompt");
+};
+
+
+exports.espaceClient = (req, res) => {
+  res.render("espaceClient");
+};
+
+
+
+exports.compteUtilisateur = async(req,res)=>{
+    try {
+     console.log(req.body);
+     const imgCte=  new imgComptes(req.body)
+       await imgCte.save()}
+    catch(e){
+ console.log(e);
+    }
+ 
+ }
+
+ exports.getCompte = async(req,res)=>{
+
+    try{
+        const read= await user.find({});
+        res.render()
+    }catch (e){
+        res.status(400).send(e)
+    }
+
+
+ }
+
+//  dashbord  admin et superAdmin
+
+exports.dashbordAccueilAdmin = (req, res) => {
+  res.render("dashbord/dashbordAcceuilAdmin");
+};
+exports.dashbordAdmin = (req, res) => {
+  res.render("dashbord/superAdminCompt");
+};
 exports.dashbordAcceuil = (req, res) => {
   res.render("dashbord/dashbordAcceuil");
 };
@@ -84,17 +128,3 @@ exports.dashbordAdmin = (req, res) => {
 exports.dashborSuperdAdmin = (req, res) => {
   res.render("dashbord/dashbordSuperAdmin");
 };
-exports.dashbordAdmin = (req, res) => {
-  res.render("dashbord/superAdminCompt");
-};
-exports.AdminCompt = (req, res) => {
-  res.render("dashbord/AdminCompt");
-};
-exports.dashbordAccueilAdmin = (req, res) => {
-  res.render("dashbord/dashbordAcceuilAdmin");
-};
-
-exports.espaceClient = (req, res) => {
-  res.render("espaceClient");
-};
-
