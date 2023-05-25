@@ -50,7 +50,7 @@ router.get("/dashbordAdmin",controllers.dashbordAdmin);
 
 router.post("/user/logout",controllers.logout);
 
-router.get("/dAcceuilAdmin",controllers.dashbordAccueilAdmin)
+router.get("/AcceuilAdmin",controllers.dashbordAccueilAdmin)
 
 router.get("/AdminCompt",controllers.AdminCompt)
 

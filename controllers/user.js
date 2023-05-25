@@ -75,7 +75,7 @@ exports.logout = async (req, res) => {
 };
 
 exports.dashbordAcceuil = (req, res) => {
-  res.render("dashbord/dashbordAcceuil");
+  res.render("dashbord/AcceuilSuperAdmin");
 };
 
 exports.dashbordAdmin = (req, res) => {
@@ -91,7 +91,7 @@ exports.AdminCompt = (req, res) => {
   res.render("dashbord/AdminCompt");
 };
 exports.dashbordAccueilAdmin = (req, res) => {
-  res.render("dashbord/dashbordAcceuilAdmin");
+  res.render("dashbord/AcceuilAdmin");
 };
 
 exports.espaceClient = (req, res) => {
