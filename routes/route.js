@@ -17,6 +17,9 @@ router.post("/post/inscription",controllers.inscription)
 
 router.post("/post/connexion",controllers.connexion)
 
+router.post("/post/admin",controller.inscriptionDasbord )
+
+router.post('/post/upload',controller.compteUtilisateur);
     
 
 router.get("/espaceClient",authentification, (req, res) => {
@@ -67,6 +70,9 @@ router.delete("/delete/:id",controller.deleteUtilisateur)
 ////route Administrateur
 router.get('/updateAdmin/:id', controller.getUpdateAdmin);
 router.post('/update-userAdmin/:id', controller.postUpdateAdmin);
+
+
+
 
 module.exports = router;
 

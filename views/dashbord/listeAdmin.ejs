@@ -4,7 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Montserrat+Alternates:wght@300&family=Poppins:wght@200;300&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Montserrat+Alternates:wght@300&family=Poppins:wght@200;300&display=swap"
+      rel="stylesheet"
+    />
     <title>Document</title>
 
     <link rel="stylesheet" href="/css/dasbord/dashbordSuperAdmin.css" />
@@ -20,7 +23,10 @@
     <div class="container">
       <header>
         <div class="menu1">
-          <img src="/images/Minimal Professional Economics Bank Logo.png" alt="" />
+          <img
+            src="/images/Minimal Professional Economics Bank Logo.png"
+            alt=""
+          />
         </div>
 
         <div class="menu2">
@@ -37,7 +43,7 @@
             <i class="fa-solid fa-file-invoice-dollar"></i>
             <a href="superAdminCompt">COMPTES</a>
           </p>
-        
+
           <p>
             <i class="fa-solid fa-right-to-bracket"></i>
             <a href="#" id="deconnexion">DÉCONNEXION</a>
@@ -50,67 +56,61 @@
 
         <table>
           <tr>
-            <th> Nom</th>
+            <th>Nom</th>
             <th>Prenoms</th>
             <th>Numéro de Téléphone</th>
             <th>Adresse Email</th>
             <th>Mot De Passe</th>
             <th>Action</th>
           </tr>
+          <% utilisateur.forEach(element => {%>
           <tr>
-            <td>Goa</td>
-            <td>Marie</td>
-            <td>084457146</td>
-            <td>hokyvbn@gmail.com</td>
-            <td>marie1234</td>
-            <td><a href="" class="non"><i class="fa-solid fa-pen-to-square"></i></a><a href="" class="non"><i class="fa-solid fa-trash" ></i></a></td>
-          </tr>
-          <tr>
-            <td>Beugre</td>
-            <td>Desnos</td>
-            <td>00008756</td>
-            <td>camarate@gmail.com</td>
-            <td>marie1234</td>
-            <td><a href="" class="non"><i class="fa-solid fa-pen-to-square"></i></a><a href="" class="non"><i class="fa-solid fa-trash" ></i></a></td>
-          </tr>
-          <tr>
-            <td>Kesse</td>
-            <td>Wihlem</td>
-            <td>097633356</td>
-            <td>marieconstance@gmail.com</td>
-            <td>marie1234</td>
-            <td><a href="" class="non"><i class="fa-solid fa-pen-to-square"></i></a><a href="" class="non"><i class="fa-solid fa-trash" ></i></a></td>
+            <td><%= element.name %></td>
+            <td><%= element.name %></td>
+            <td><%= element.name %></td>
+            <td><%= element.name %></td>
+            <td><%= element.name %></td>
+            <td>
+              <a href="" class="non"
+                ><i class="fa-solid fa-pen-to-square"></i></a
+              ><a href="" class="non"><i class="fa-solid fa-trash"></i></a>
+            </td>
+            <% }); %>
           </tr>
         </table>
         <h2 class="titreformu">Formulaire d'ajout de nouvel Administrateur</h2>
         <div class="login-box">
-          
-          <form>
+          <form method="post" action="/post/admin">
             <div class="user-box">
-              <input type="text" name="name">
+              <input type="text" name="name" />
               <label>Nom</label>
             </div>
             <div class="user-box">
-              <input type="text" name="firstName">
+              <input type="text" name="firstName" />
               <label>Prenoms</label>
             </div>
             <div class="user-box">
-              <input type="tel" name="telephone">
+              <input type="tel" name=" telephone" />
               <label>Téléphone</label>
             </div>
             <div class="user-box">
-              <input type="email" name=" email">
+              <input type="email" name=" email" />
               <label>Adresse Email</label>
             </div>
             <div class="user-box">
-              <input type="password" name="password">
+              <input type="password" name="password" />
               <label>Mot De Passe</label>
-            </div><center>
-              <button type="submit
-              ">ENREGISTRER</button></center>
+            </div>
+            <center>
+              <button
+                type="submit
+              "
+              >
+                ENREGISTRER
+              </button>
+            </center>
           </form>
         </div>
-       
       </section>
     </div>
   </body>
