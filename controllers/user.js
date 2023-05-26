@@ -1,6 +1,8 @@
 const user = require("../modele/utilisateur");
 
-const imgComptes= require("../modele/imageCompte")
+const imgComptes = require("../modele/imageCompte");
+
+const comptDasbord = require("../modele/compteDashbord");
 
 exports.inscription = async (req, res) => {
   try {
@@ -19,16 +21,11 @@ exports.inscription = async (req, res) => {
   }
 };
 
-
 exports.connexion = async (req, res) => {
   try {
     const logcon = await user.findCon(req.body.email, req.body.password);
     const authoKen = await logcon.generateAuthTokenAndSave();
 
-      if( logcon.authokens.authoken){
-        const Deconnect="Deconnexion"
-        res.redirect("/espaceClient",Deconnect);
-      }
     console.log(logcon, ":salut");
     res.redirect("/espaceClient");
   } catch (error) {
@@ -58,17 +55,21 @@ exports.AcceuilSuperAdmin = (req, res) => {
 exports.dashbordAdmin = (req, res) => {
   res.render("dashbord/dashbordAdmin");
 };
-exports.listeAdmin = (req, res) => {
-  res.render("dashbord/listeAdmin");
+exports.listeAdmin = async (req, res) => {
+  const utilisateur = await comptDasbord.find({});
+
+  res.render("dashbord/listeAdmin", { utilisateur });
 };
-exports.superAdminCompt = (req, res) => {
-  res.render("dashbord/superAdminCompt");
+exports.superAdminCompt = async (req, res) => {
+  const compt = await user.find({});
+
+  res.render("dashbord/superAdminCompt", { compt });
 };
 exports.AdminCompt = async (req, res) => {
-    
-const compte=  await imgComptes.find({})
+  const compte = await imgComptes.find({});
+  console.log(compte);
 
-  res.render("dashbord/AdminCompt",{compte});
+  res.render("dashbord/AdminCompt", { compte});
 };
 exports.AcceuilAdmin = (req, res) => {
   res.render("dashbord/AcceuilAdmin");
@@ -89,4 +90,3 @@ exports.connexionAdmins = (req, res) => {
 exports.espaceClient = (req, res) => {
   res.render("espaceClient");
 };
-

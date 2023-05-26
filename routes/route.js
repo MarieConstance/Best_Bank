@@ -17,6 +17,7 @@ router.post("/post/inscription",controllers.inscription)
 
 router.post("/post/connexion",controllers.connexion)
 
+router.post("/post/admin",controller.inscriptionDasbord )
 
 router.post('/post/upload',controller.compteUtilisateur);
     
@@ -63,6 +64,9 @@ router.get("/updateAdmin",controllers.updateAdmin)
 router.get("/connexionAdmins",controllers.connexionAdmins)
 
 router.delete("/delete/:id",controller.deleteUtilisateur)
+
+
+
 
 
 
