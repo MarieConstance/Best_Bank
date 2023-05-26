@@ -61,9 +61,9 @@ exports.listeAdmin = async (req, res) => {
   res.render("dashbord/listeAdmin", { utilisateur });
 };
 exports.superAdminCompt = async (req, res) => {
-  const compt = await user.find({});
+  const compte = await imgComptes.find({});
 
-  res.render("dashbord/superAdminCompt", { compt });
+  res.render("dashbord/superAdminCompt", { compte });
 };
 exports.AdminCompt = async (req, res) => {
   const compte = await imgComptes.find({});

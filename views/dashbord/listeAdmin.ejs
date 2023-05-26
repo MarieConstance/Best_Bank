@@ -63,17 +63,19 @@
             <th>Mot De Passe</th>
             <th>Action</th>
           </tr>
+          <% utilisateur.forEach(element => {%>
           <tr>
-            <td>Goa</td>
-            <td>Marie</td>
-            <td>084457146</td>
-            <td>hokyvbn@gmail.com</td>
-            <td>marie1234</td>
+            <td><%= element.name %></td>
+            <td><%= element.name %></td>
+            <td><%= element.name %></td>
+            <td><%= element.name %></td>
+            <td><%= element.name %></td>
             <td>
               <a href="" class="non"
                 ><i class="fa-solid fa-pen-to-square"></i></a
               ><a href="" class="non"><i class="fa-solid fa-trash"></i></a>
             </td>
+            <% }); %>
           </tr>
         </table>
         <h2 class="titreformu">Formulaire d'ajout de nouvel Administrateur</h2>

@@ -49,8 +49,8 @@
 
       <section>
         <h1>LISTE DE TOUS LES COMPTES</h1>
-        <% compte.forEach(element => {%>
 
+        
         <table>
           <tr>
             <th>Nom</th>
@@ -59,8 +59,9 @@
             <th>Date</th>
             <th>Action</th>
           </tr>
+          <% compte.forEach(element => {%>
           <tr>
-            <td><%= element.name %>/td></td>
+            <td><%= element.name %></td>
             <td><%= element.first_name%></td>
             <td><%= element.first_name%></td>
             <td><%= element.first_name%></td>
@@ -68,13 +69,16 @@
               <a href="updateCompt" class="non"
                 ><i class="fa-solid fa-pen-to-square"></i
               ></a>
-              <form action="/delete/<%= compte._id %>?_method=delete" method="post">
+              <form
+                action="/delete/<%= element._id %>?_method=delete"
+                method="post"
+              >
                 <i class="fa-solid fa-trash"></i>
               </form>
             </td>
+            <% }); %>
           </tr>
         </table>
-        <% }); %>
       </section>
     </div>
   </body>
