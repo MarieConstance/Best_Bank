@@ -24,9 +24,9 @@ exports.connexion = async (req, res) => {
   try {
     const logcon = await user.findCon(req.body.email, req.body.password);
     const authoKen = await logcon.generateAuthTokenAndSave();
-    
-      res.redirect("/espaceClient");
-  
+
+    console.log(logcon, ":salut");
+    res.redirect("/espaceClientSolde");
    
   } catch (error) {
     console.log("cklnez", error);
@@ -95,3 +95,5 @@ exports.connexionAdmins = (req, res) => {
 exports.espaceClient = (req, res) => {
   res.render("espaceClient");
 };
+
+
