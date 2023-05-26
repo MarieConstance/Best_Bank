@@ -48,9 +48,20 @@ const Compte = new Schema(
       required: true,
     }
   },
+  numeroCompte: {
+    type: String,
+    default: getCompte(name,first_name)
+  },
   { timestamps: true }
 );
+let number = 101
+function getCompte(a,b){
+  let t = a.split("").splice(0,3).join("");
+  let p = b.split("").splice(0,1).join("");
+  number++;
+  return `${t}${p}${number}`
 
+}
 const compte = mongoose.model("Compte", Compte)
 module.exports = compte
 
