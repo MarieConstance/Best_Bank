@@ -60,10 +60,17 @@ router.get("/updateAdmin",controllers.updateAdmin)
 
 router.get("/connexionAdmins",controllers.connexionAdmins)
 
+<<<<<<< HEAD
 router.get('/updateCompt/:id', controller.getUpdateUserCompte);
 router.put('/update-userCompte/:id', controller.postUpdateUserCompte);
+=======
+router.delete("/delete/:id",controller.deleteUtilisateur)
+
+
+>>>>>>> f60f84454d6a3afbc0445b8aeb7fa786513b8762
 
 module.exports = router;
+
 
 
 
