@@ -30,7 +30,8 @@ main{
     font-size: 3.5rem;
 }
 .texte2{
-    
+  margin-top:2rem;
+    text-align: center
 }
 .operations{
     margin: 50px auto ;
@@ -170,4 +171,7 @@ main{
     color: #fff;
     transition: color 1s;
    }
-   
+   table{
+    margin-top:2rem;
+    background-color: whitesmoke;
+   }
