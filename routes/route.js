@@ -1,7 +1,6 @@
 const express = require("express");
 const multer =require("../middleware/multer")
 const controllers = require("../controllers/user");
-const compteControl = require("../controllers/compte")
 const authentification=require("../middleware/authentification")
 const controller=require("../controllers/compte")
 
@@ -17,7 +16,7 @@ router.get("/", (req, res) => {
 router.post("/post/inscription",controllers.inscription)
 
 router.post("/post/connexion",controllers.connexion)
-router.post("/post/compte",compteControl.envoyer)
+
     
 
 router.get("/espaceClient",authentification, (req, res) => {
@@ -49,11 +48,7 @@ router.get("/dashbordAdmin",controllers.dashbordAdmin);
 
 router.post("/user/logout",controllers.logout);
 
-<<<<<<< HEAD
-router.get("/AcceuilAdmin",controllers.dashbordAccueilAdmin)
-=======
 router.get("/AcceuilAdmin",controllers.AcceuilAdmin)
->>>>>>> 40c33298746a9d585b634d856f2cb42972511ca0
 
 router.get("/AdminCompt",controllers.AdminCompt)
 
@@ -63,7 +58,8 @@ router.get("/updateCompt",controllers.updateCompt)
 
 router.get("/connexionAdmins",controllers.connexionAdmins)
 
-
+router.get('/updateCompt/:id', controller.getUpdateUserCompte);
+router.put('/update-userCompte/:id', controller.postUpdateUserCompte);
 
 module.exports = router;
 

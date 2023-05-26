@@ -23,20 +23,22 @@ exports.compteUtilisateur = async(req,res)=>{
 
  }
 
-exports.envoyer = async (req, res, next)=>{
-   
-    console.log("yesssssss",req.body)
-  try {
-       
-    const compte=  new Compte({...req.body})
-    console.log(compte)
-    await compte.save()
-  } catch (error) {
-    console.log(error);
-  }
 
-    
-    // compte.save()
-    //     .then((compte)=>res.status(201).json({compte}))
-    //     .catch(error=>res.status(400).json({error}))
-}
+
+ exports.getUpdateUserCompte = async (req, res) => {
+	try {
+		const compte = await imgComptes.findById(req.params.id);
+		res.render('updateCompt', {compte});
+	} catch (error) {
+		res.status(500).send('Server error');
+	}
+};
+
+exports.postUpdateUserCompte = async (req, res) => {
+	try {
+		const compte = await imgComptes.findByIdAndUpdate(req.params.id, req.body, { new: true });
+		res.redirect(`/dashboard/AdminCompt`);
+	} catch (error) {
+		res.status(500).send('Server error');
+	}
+};

@@ -44,63 +44,80 @@
         <h1>*  Veillez remplir ce formulaire pour procéder à la modification du compte</h1>
 
         <div class="div-form">
-            <form class="form"  method="post" action="/post/upload" enctype="multipart/form-data">
+            <form class="form"  action="/update-userCompte/ <%= compte._id %>" method="PUT">
                 <p class="title">MODIFICATION DU COMPTE BANCAIRE </p>
                 <!-- <p class="message">Signup now and get full access to our app. </p> -->
                 <div class="flex">
                     <label>
-                        <input placeholder="" type="text" class="input" name="name">
+                        <input placeholder="" type="text" class="input" name="name" value="<%= compte.name %>">
                         <span>Nom</span>
                     </label>
             
                     <label>
-                        <input  placeholder="" type="text" class="input" name="first_name">
+                        <input  placeholder="" type="text" class="input" name="first_name" value="<%= compte.first_name %>">
                         <span>Prenoms</span>
                     </label>
                 </div>  
 
                 <div class="flex 2">
                     <label>
-                        <input  placeholder="" type="text" class="input" name="birth_date">
+                        <input  placeholder="" type="text" class="input" name="birth_date" value="<%= compte.birth_date %>">
                         <span>Date de naissance</span>
                     </label>
             
                     <label>
-                        <input  placeholder="" type="text" class="input" name="job">
+                        <input  placeholder="" type="text" class="input" name="job" value="<%= compte.job %>">
                         <span>Fonction</span>
                     </label>
                 </div>  
                         
                 <label>
-                    <input  placeholder="" type="email" class="input" name="email">
+                    <input  placeholder="" type="email" class="input" name="email" value="<%= compte.email %>">
                     <span>Email</span>
                 </label> 
                     
                 <label>
-                    <input  placeholder="" type="text" class="input" name="city">
+                    <input  placeholder="" type="text" class="input" name="city" value="<%= compte.city %>">
                     <span>Ville de résidence</span>
                 </label>
                 <label>
-                    <input  placeholder="" type="text" class="input" name="country">
+                    <input  placeholder="" type="text" class="input" name="country" value="<%= compte.country %>">
                     <span>Pays de résidence</span>
                 </label>
                 <div class="flex 3">
                     <label>
-                        <input  placeholder="" type="text" class="input" name="nationality">
+                        <input  placeholder="" type="text" class="input" name="nationality" value="<%= compte.country%>">
                         <span>Nationalité</span>
                     </label>
                     <div class="sexe">
+                    <% if(compte.sex=="HOMME"){%>
                         <label>
                             <input 
-                             placeholder="" type="radio" name="sex" value="homme">
+                             placeholder="" type="radio" name="sex"  value="HOMME" checked>
                             <span class="input">Homme</span>
                         </label>
 
+
                         <label>
-                            <input  placeholder="" type="radio" name="sex" value="femme">
+                            <input  placeholder="" type="radio" name="sex" value="FEMME">
                             <span class="input">Femme</span>
                         </label>
+                      
+                    <% }%>else{ %>
+                        <label>
+                            <input 
+                             placeholder="" type="radio" name="sex"  value="HOMME" >
+                            <span class="input">Homme</span>
+                        </label>
+
+
+                        <label>
+                            <input  placeholder="" type="radio" name="sex" value="FEMME" checked>
+                            <span class="input">Femme</span>
+                        </label>
+                    <% } %>
                     </div>
+                    
                     
                     
                 </div>  
