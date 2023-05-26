@@ -64,7 +64,9 @@ router.get('/updateCompt/:id', controller.getUpdateUserCompte);
 router.put('/update-userCompte/:id', controller.postUpdateUserCompte);
 router.delete("/delete/:id",controller.deleteUtilisateur)
 
-
+////route Administrateur
+router.get('/updateAdmin/:id', controller.getUpdateAdmin);
+router.post('/update-userAdmin/:id', controller.postUpdateAdmin);
 
 module.exports = router;
 
