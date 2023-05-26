@@ -44,7 +44,7 @@
         <h1>*  Veillez remplir ce formulaire pour procéder à la modification du compte</h1>
 
         <div class="div-form">
-            <form class="form"  action="/update-userCompte/ <%= compte._id %>" method="PUT">
+            <form class="form"  method="PUT" action="/update-userCompte/<%=compte._id %>" >
                 <p class="title">MODIFICATION DU COMPTE BANCAIRE </p>
                 <!-- <p class="message">Signup ok now and get full access to our app. </p> -->
                 <div class="flex">
@@ -61,7 +61,7 @@
 
                 <div class="flex 2">
                     <label>
-                        <input  placeholder="" type="text" class="input" name="birth_date" value="<%= compte.birth_date %>">
+                        <input  placeholder="" type="date" class="input" name="birth_date" value="<%= compte.nbirth_date %>">
                         <span>Date de naissance</span>
                     </label>
             
@@ -86,45 +86,47 @@
                 </label>
                 <div class="flex 3">
                     <label>
-                        <input  placeholder="" type="text" class="input" name="nationality" value="<%= compte.country%>">
+                        <input  placeholder="" type="text" class="input" name="nationality" value="<%= compte.nationality %>">
                         <span>Nationalité</span>
                     </label>
                     <div class="sexe">
-                    <% if(compte.sex=="HOMME"){%>
+                      <% if (compte.sex=="HOMME"){%>
                         <label>
                             <input 
-                             placeholder="" type="radio" name="sex"  value="HOMME" checked>
+                             placeholder="" type="radio" name="sex" value="HOMME" checked>
                             <span class="input">Homme</span>
                         </label>
-
 
                         <label>
                             <input  placeholder="" type="radio" name="sex" value="FEMME">
                             <span class="input">Femme</span>
                         </label>
+<<<<<<< HEAD
                       
                     <% }else{ %>
+=======
+                      <% } else { %>
+>>>>>>> dfdbd5ee4ef19d5f50ff591cc69efa1b53dfc730
                         <label>
-                            <input 
-                             placeholder="" type="radio" name="sex"  value="HOMME" >
-                            <span class="input">Homme</span>
-                        </label>
+                          <input 
+                           placeholder="" type="radio" name="sex" value="HOMME" >
+                          <span class="input">Homme</span>
+                      </label>
 
-
-                        <label>
-                            <input  placeholder="" type="radio" name="sex" value="FEMME" checked>
-                            <span class="input">Femme</span>
-                        </label>
-                    <% } %>
+                      <label>
+                          <input  placeholder="" type="radio" name="sex" value="FEMME" checked>
+                          <span class="input">Femme</span>
+                      </label>
+                      <%}%>
+                         
                     </div>
-                    
                     
                     
                 </div>  
 
                 <div class="flex 4">
                     <label>
-                        <input  placeholder="" type="number" class="input" name="phone_number">
+                        <input  placeholder="" type="tel" class="input" name="phone_number" value="<%= compte.phone_numbe %>">
                         <span>+225</span>
                     </label>
                 </div>  
@@ -133,7 +135,7 @@
                 
             
                     <label>
-                        <input  placeholder="" type="file" class="input" name="file" >
+                        <input  placeholder="" type="file" class="input" name="file" value="<%= compte.file%>">
                         
                     </label>
                 </div>  

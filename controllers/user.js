@@ -48,8 +48,13 @@ exports.logout = async (req, res) => {
 
 // compte admin
 
-exports.AcceuilSuperAdmin = (req, res) => {
-  res.render("dashbord/AcceuilSuperAdmin");
+exports.AcceuilSuperAdmin = async(req, res) => {
+const admin= await comptDasbord.find({})
+const utilisateurCompte= await imgComptes.find({})
+  const admine= admin.length
+  const utilisateurComptes= utilisateurCompte.length
+
+  res.render("dashbord/AcceuilSuperAdmin",{admine,utilisateurComptes});
 };
 
 exports.dashbordAdmin = (req, res) => {

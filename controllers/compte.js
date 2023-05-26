@@ -19,12 +19,76 @@ exports.deleteUtilisateur = async (req, res) => {
   res.redirect("/dashbord/AdminCompt");
 };
 
+// exports.inscriptionDasbord = async (req, res) => {
+//   try {
+//     const login = await adminDash.findEmail(req.body.email);
+//     console.log("login : ", login);
+//     if (!login) {
+//       const logEmail = new adminDash({ ...req.body, role: "admin" });
+//     }
+//   } catch (error) {
+//     console.log(error);
+//     res.status(400).send(error);
+//   }
+// };
+// exports.conDashbord = async (req, res) => {
+//   try {
+//     const logcon = await adminDash.findCon(req.body.email, req.body.password);
+//     if (logcon.role === "admin") {
+//       res.redirect("/dashbord/AcceuilAdmin");
+//     }
+//     console.log(logcon, ":salut");
+//     res.redirect("/dashbord/AcceuilSuperAdmin");
+//   } catch (error) {
+//     console.log("cklnez", error);
+//     res.status(400).send(error);
+//   }
+// };
+
+exports.deleteUtilisateur = async (req, res) => {
+  const id = req.param.id;
+
+  await adminDash.findByIdAndDelete(id, req.body);
+  res.redirect("/dashbord/AdminCompt");
+};
+
+exports.deleteUtilisateur = async (req, res) => {
+  const id = req.param.id;
+
+  await imgComptes.findByIdAndDelete(id, req.body);
+  res.redirect("/dashbord/AdminCompt");
+};
+
+exports.getUpdateUserCompte = async (req, res) => {
+  try {
+    const compte = await imgComptes.findById(req.params.id);
+    res.render("dashbord/updateCompt", { compte });
+  } catch (error) {
+    res.status(500).send("Server error");
+  }
+};
+
+exports.postUpdateUserCompte = async (req, res) => {
+  try {
+    const compte = await imgComptes.findByIdAndUpdate(req.params.id, req.body, {
+      new: true,
+    });
+    res.redirect("/dashbord/listeAdmin");
+  } catch (error) {
+    res.status(500).send("Server error");
+  }
+};
+
+/////////////////////ADMINISTRATEUR/////////////
+
 exports.inscriptionDasbord = async (req, res) => {
   try {
+    console.log(req.body.email);
     const login = await adminDash.findEmail(req.body.email);
     console.log("login : ", login);
     if (!login) {
       const logEmail = new adminDash({ ...req.body, role: "admin" });
+      await logEmail.save();
     }
   } catch (error) {
     console.log(error);
@@ -35,16 +99,17 @@ exports.conDashbord = async (req, res) => {
   try {
     const logcon = await adminDash.findCon(req.body.email, req.body.password);
     if (logcon.role === "admin") {
-      res.redirect("/dashbord/AcceuilAdmin");
+      res.redirect("/dashbord/dashbordAdmin");
     }
     console.log(logcon, ":salut");
-    res.redirect("/dashbord/AcceuilSuperAdmin");
+    res.redirect("/dashbord/dashbordSuperAdmin");
   } catch (error) {
     console.log("cklnez", error);
     res.status(400).send(error);
   }
 };
 
+<<<<<<< HEAD
 exports.deleteUtilisateur = async (req, res) => {
   const id = req.param.id;
 
@@ -133,3 +198,26 @@ exports.deleteUtilisateur=async(req,res)=>{
   };
 
  
+=======
+exports.getUpdateAdmin = async (req, res) => {
+  try {
+    const compteAdmin = await adminDash.findById(req.params.id);
+    res.render("updateAdmin", { compteAdmin });
+  } catch (error) {
+    res.status(500).send("Server error");
+  }
+};
+
+exports.postUpdateAdmin = async (req, res) => {
+  try {
+    const compteAdmin = await adminDash.findByIdAndUpdate(
+      req.params.id,
+      req.body,
+      { new: true }
+    );
+    res.redirect(`/dashboard/AdminCompt`);
+  } catch (error) {
+    res.status(500).send("Server error");
+  }
+};
+>>>>>>> dfdbd5ee4ef19d5f50ff591cc69efa1b53dfc730
