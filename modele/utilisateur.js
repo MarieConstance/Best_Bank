@@ -24,17 +24,13 @@ const utilisateur = new Schema(
       type: String,
       required: true,
     },
-    role: {
-      type:String,
-      role:"admin"
-  },
     authokens: [
       {
         authoken: {
           type: String,
           required: true,
-        },
-      },
+        }
+      }
     ]
   },
   { timestamps: true }

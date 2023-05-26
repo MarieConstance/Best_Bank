@@ -63,6 +63,8 @@ router.get("/updateAdmin",controllers.updateAdmin)
 
 router.get("/connexionAdmins",controllers.connexionAdmins)
 
+
+
 router.get('/updateComptes/:id', controller.getUpdateUserCompte);
 router.put('/update-userCompte/:id', controller.postUpdateUserCompte);
 router.delete("/delete/:id",controller.deleteUtilisateur)

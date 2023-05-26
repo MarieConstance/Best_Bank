@@ -43,11 +43,7 @@ const imgCompte = new Schema(
     sex: {
       type: String,
       require: true,
-    },
-    file: {
-      type: String,
-      require: true,
-    },
+    }
   },
   { timestamps: true }
 );

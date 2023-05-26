@@ -7,12 +7,11 @@ const comptDasbord = require("../modele/compteDashbord");
 exports.inscription = async (req, res) => {
   try {
     const login = await user.findEmail(req.body.email);
-    console.log("login : ", login);
-    
+    // console.log("login : ", login);
+
     if (!login) {
       const logEmail = new user(req.body);
       const authoKen = await logEmail.generateAuthTokenAndSave();
-
       res.redirect("/connexion");
     }
   } catch (error) {
@@ -25,9 +24,10 @@ exports.connexion = async (req, res) => {
   try {
     const logcon = await user.findCon(req.body.email, req.body.password);
     const authoKen = await logcon.generateAuthTokenAndSave();
-
-    console.log(logcon, ":salut");
-    res.redirect("/espaceClient");
+    
+      res.redirect("/espaceClient");
+  
+   
   } catch (error) {
     console.log("cklnez", error);
     res.status(400).send(error);
@@ -48,13 +48,13 @@ exports.logout = async (req, res) => {
 
 // compte admin
 
-exports.AcceuilSuperAdmin = async(req, res) => {
-const admin= await comptDasbord.find({})
-const utilisateurCompte= await imgComptes.find({})
-  const admine= admin.length
-  const utilisateurComptes= utilisateurCompte.length
+exports.AcceuilSuperAdmin = async (req, res) => {
+  const admin = await comptDasbord.find({});
+  const utilisateurCompte = await imgComptes.find({});
+  const admine = admin.length;
+  const utilisateurComptes = utilisateurCompte.length;
 
-  res.render("dashbord/AcceuilSuperAdmin",{admine,utilisateurComptes});
+  res.render("dashbord/AcceuilSuperAdmin", { admine, utilisateurComptes });
 };
 
 exports.dashbordAdmin = (req, res) => {
@@ -74,7 +74,7 @@ exports.AdminCompt = async (req, res) => {
   const compte = await imgComptes.find({});
   console.log(compte);
 
-  res.render("dashbord/AdminCompt", { compte});
+  res.render("dashbord/AdminCompt", { compte });
 };
 exports.AcceuilAdmin = (req, res) => {
   res.render("dashbord/AcceuilAdmin");
