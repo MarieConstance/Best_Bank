@@ -4,28 +4,44 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Montserrat+Alternates:wght@300&family=Poppins:wght@200;300&display=swap" rel="stylesheet">
     <title>Document</title>
     <link rel="stylesheet" href="/css/inscription.css" />
   </head>
   <body>
-    <form class="form"  method="post" action="/post/inscription" >
-      <h2>INSCRIPTION</h2>
-      <p class="form-title">Connectez-vous à votre compte</p>
-      <div class="input-container">
-        <input type="text" placeholder="Nom" name="nom"/>
-        <span> </span>
+
+    <form class="form_main" action="">
+      <p class="heading">INSCRIPTION</p>
+      <p class="form-title">Inscrivez-vous</p>
+      <div class="inputContainer">
+          
+          <input type="text" placeholder="Nom" name="nom" class="inputField"/>
       </div>
-      <div class="input-container">
-        <input type="email" placeholder="Adress email" name="email"/>
+      <div class="inputContainer">
+        
+        <input type="email" placeholder="Adress email" name="email" class="inputField"/>
       </div>
-      <div class="input-container">
-        <input type="number" placeholder="Numero telephone" name="telephone"/>
-        <span> </span>
+
+      <div class="inputContainer">
+        
+        <input type="number" placeholder="Numero telephone" name="telephone" class="inputField"/>
       </div>
-      <div class="input-container">
-        <input type="password" placeholder="Enter password" name="password"/>
-      </div>
-      <button type="submit" class="submit">inscription</button>
-    </form>
+      
+  <div class="inputContainer">
+      <svg viewBox="0 0 16 16" fill="#2e2e2e" height="16" width="16" xmlns="http://www.w3.org/2000/svg" class="inputIcon">
+      <path d="M8 1a2 2 0 0 1 2 2v4H6V3a2 2 0 0 1 2-2zm3 6V3a3 3 0 0 0-6 0v4a2 2 0 0 0-2 2v5a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2z"></path>
+      </svg>
+      <input placeholder=" Mot de Passe" id="motdepasse" class="inputField" type="password">
+  </div>                          
+  <button id="button">Connexion</button>
+  <p class="signup-link">
+    
+    <a href="connexion">Retour</a>
+  </p>
+      
+  </form>
+  
   </body>
 </html>
+
+
