@@ -23,7 +23,7 @@ router.post('/post/upload',controller.compteUtilisateur);
 router.post('/post/connexionAdmins',controller.conDashbord);
     
 
-router.get("/espaceClient",authentification, (req, res) => {
+router.get("/espaceClient", (req, res) => {
   res.render("espaceClient");
 });
 router.get("/connexion", (req, res) => {
@@ -67,8 +67,8 @@ router.get("/connexionAdmins",controllers.connexionAdmins)
 
 
 router.get('/updateComptes/:id', controller.getUpdateUserCompte);
-router.put('/update-userCompte/:id', controller.postUpdateUserCompte);
-router.delete("/delete/:id",controller.deleteUtilisateur)
+router.get('/update-userCompte/:id', controller.postUpdateUserCompte);
+router.get("/delete/:id",controller.deleteUtilisateurs )
         
 ////route Administrateur
 router.get('/updateAdmin/:id', controller.getUpdateAdmin);

@@ -46,7 +46,7 @@
 
           <p>
             <i class="fa-solid fa-right-to-bracket"></i>
-            <a href="#" id="deconnexion">DÉCONNEXION</a>
+            <a href="connexionAdmins" id="deconnexion">DÉCONNEXION</a>
           </p>
         </div>
       </header>
@@ -60,20 +60,22 @@
             <th>Prenoms</th>
             <th>Numéro de Téléphone</th>
             <th>Adresse Email</th>
-            <th>Mot De Passe</th>
+
             <th>Action</th>
           </tr>
           <% utilisateur.forEach(element => {%>
           <tr>
             <td><%= element.name %></td>
-            <td><%= element.name %></td>
-            <td><%= element.name %></td>
-            <td><%= element.name %></td>
-            <td><%= element.name %></td>
+            <td><%= element.firstName %></td>
+            <td><%= element.telephone %></td>
+            <td><%= element. email %></td>
+
             <td>
               <a href="/updateComptes/<%=element._id%>" class="non"
                 ><i class="fa-solid fa-pen-to-square"></i></a
-              ><a href="" class="non"><i class="fa-solid fa-trash"></i></a>
+              ><a href="/delete/<%= element._id %>" class="non"
+                ><i class="fa-solid fa-trash"></i
+              ></a>
             </td>
             <% }); %>
           </tr>

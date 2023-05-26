@@ -45,8 +45,9 @@ exports.deleteUtilisateur = async (req, res) => {
 //   }
 // };
 
-exports.deleteUtilisateur = async (req, res) => {
-  const id = req.param.id;
+exports.deleteUtilisateurs = async (req, res) => {
+  const id = req.params.id;
+  console.log('id',id);
 
   await adminDash.findByIdAndDelete(id, req.body);
   res.redirect("/dashbord/AdminCompt");
@@ -105,7 +106,7 @@ exports.conDashbord = async (req, res) => {
     res.redirect("/AcceuilSuperAdmin");
   } catch (error) {
     console.log("cklnez", error);
-    res.status(400).send(error);
+    res.redirect("/connexionAdmins");
   }
 };
 

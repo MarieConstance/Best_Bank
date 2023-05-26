@@ -26,7 +26,7 @@ exports.connexion = async (req, res) => {
     const authoKen = await logcon.generateAuthTokenAndSave();
 
     console.log(logcon, ":salut");
-    res.redirect("/espaceClientSolde");
+    res.redirect("/espaceClient");
    
   } catch (error) {
     console.log("cklnez", error);
