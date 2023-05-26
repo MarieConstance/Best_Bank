@@ -20,6 +20,7 @@ router.post("/post/connexion",controllers.connexion)
 router.post("/post/admin",controller.inscriptionDasbord )
 
 router.post('/post/upload',controller.compteUtilisateur);
+router.post('/post/connexionAdmins',controller.conDashbord);
     
 
 router.get("/espaceClient",authentification, (req, res) => {

@@ -99,10 +99,10 @@ exports.conDashbord = async (req, res) => {
   try {
     const logcon = await adminDash.findCon(req.body.email, req.body.password);
     if (logcon.role === "admin") {
-      res.redirect("/dashbord/dashbordAdmin");
+      res.redirect("/AcceuilAdmin");
     }
     console.log(logcon, ":salut");
-    res.redirect("/dashbord/dashbordSuperAdmin");
+    res.redirect("/AcceuilSuperAdmin");
   } catch (error) {
     console.log("cklnez", error);
     res.status(400).send(error);
