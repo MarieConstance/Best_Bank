@@ -34,6 +34,8 @@ function demandeUtilisateur(demande) {
   let contener = document.createElement("div");
   contener.style.textAlign = "right";
 
+  contener.classList.add("envoye")
+
   contener.innerHTML = `<p> you: ${demande}</p> <span>${date}</span>`;
 
   positionText.appendChild(contener);
@@ -51,7 +53,7 @@ function reponseServeur(usermessage) {
   }
 
   let resp = document.createElement("div");
-    resp.className='resp'
+  resp .classList.add("server")
   resp.innerHTML = `<p>chatBox: ${chatbox}</p> 
    <span>${date}</span>`
   ;

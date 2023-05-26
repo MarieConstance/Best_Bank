@@ -98,6 +98,10 @@ exports.updateCompt = (req, res) => {
   res.render("dashbord/updateCompt");
 };
 
+exports.updateAdmin = (req, res) => {
+  res.render("dashbord/updateAdmin");
+};
+
 exports.connexionAdmins = (req, res) => {
   res.render("dashbord/connexionAdmins");
 };

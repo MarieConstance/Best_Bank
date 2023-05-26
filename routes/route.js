@@ -56,6 +56,8 @@ router.get("/superAdminCompt",controllers.superAdminCompt)
 
 router.get("/updateCompt",controllers.updateCompt)
 
+router.get("/updateAdmin",controllers.updateAdmin)
+
 router.get("/connexionAdmins",controllers.connexionAdmins)
 
 router.get('/updateCompt/:id', controller.getUpdateUserCompte);
