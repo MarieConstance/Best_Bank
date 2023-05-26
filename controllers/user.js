@@ -49,11 +49,8 @@ exports.logout = async (req, res) => {
   res.send("salut");
 };
 
-<<<<<<< HEAD
-=======
 // compte admin
 
->>>>>>> f60f84454d6a3afbc0445b8aeb7fa786513b8762
 exports.AcceuilSuperAdmin = (req, res) => {
   res.render("dashbord/AcceuilSuperAdmin");
 };

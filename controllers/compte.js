@@ -22,6 +22,30 @@ res.redirect("/dashbord/AdminCompt")
 }
 
 
+exports.getUpdateUserCompte = async (req, res) => {
+	try {
+		const compte = await imgComptes.findById(req.params.id);
+		res.render('updateCompt', {compte});
+	} catch (error) {
+		res.status(500).send('Server error');
+	}
+};
+
+exports.postUpdateUserCompte = async (req, res) => {
+	try {
+		const compte = await imgComptes.findByIdAndUpdate(req.params.id, req.body, { new: true });
+		res.redirect(`/dashboard/superAdminCompt`);
+	} catch (error) {
+		res.status(500).send('Server error');
+	}
+};
+
+
+
+
+
+
+/////////////////////ADMINISTRATEUR/////////////
 
 exports.inscriptionDasbord=async (req, res) => {
    try {
@@ -51,27 +75,23 @@ exports.inscriptionDasbord=async (req, res) => {
  };
 
 
-<<<<<<< HEAD
- }
-
-
-
- exports.getUpdateUserCompte = async (req, res) => {
+ exports.getUpdateAdmin = async (req, res) => {
 	try {
-		const compte = await imgComptes.findById(req.params.id);
-		res.render('updateCompt', {compte});
+		const compteAdmin = await adminDash.findById(req.params.id);
+		res.render('updateAdmin', {compteAdmin});
 	} catch (error) {
 		res.status(500).send('Server error');
 	}
 };
 
-exports.postUpdateUserCompte = async (req, res) => {
+
+exports.postUpdateAdmin = async (req, res) => {
 	try {
-		const compte = await imgComptes.findByIdAndUpdate(req.params.id, req.body, { new: true });
+		const compteAdmin = await adminDash.findByIdAndUpdate(req.params.id, req.body, { new: true });
 		res.redirect(`/dashboard/AdminCompt`);
 	} catch (error) {
 		res.status(500).send('Server error');
 	}
 };
-=======
->>>>>>> f60f84454d6a3afbc0445b8aeb7fa786513b8762
+
+
