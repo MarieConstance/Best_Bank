@@ -7,10 +7,14 @@ const { Schema } = mongoose;
 
 const administrateur = new Schema(
   {
-    nom: {
+    name: {
       type: String,
       required: true,
       trim: true,
+    },
+    firstName:{
+      type:String,
+      required:true
     },
     email: {
       type: String,
@@ -28,28 +32,12 @@ const administrateur = new Schema(
     role: {
         type:String,
         role:"admin"
-    },
-    authokens: [
-      {
-        authoken: {
-          type: String,
-          required: true,
-        },
-      }
-    ],
+    }
   },
   { timestamps: true }
 );
 
 
-
-
-administrateur.methods.generateAuthTokenAndSave = async function () {
-    const authoken = jwt.sign({ _id: this._id.toString() }, "foo");
-    this.authokens.push({ authoken });
-    await this.save();
-    return authoken;
-  }
   
   // fonction pour verifier l'email a l'inscription
   administrateur.statics.findEmail = async (email) => {

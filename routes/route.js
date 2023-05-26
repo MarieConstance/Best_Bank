@@ -62,7 +62,7 @@ router.get("/updateAdmin",controllers.updateAdmin)
 
 router.get("/connexionAdmins",controllers.connexionAdmins)
 
-router.delete("/delete/:id",controller.deleteAdminCompte)
+router.delete("/delete/:id",controller.deleteUtilisateur)
 
 
 
