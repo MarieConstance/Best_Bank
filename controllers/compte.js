@@ -54,7 +54,7 @@ exports.deleteUtilisateurs = async (req, res) => {
 };
 
 exports.deleteUtilisateur = async (req, res) => {
-  const id = req.param.id;
+  const id = req.params.id;
 
   await imgComptes.findByIdAndDelete(id, req.body);
   res.redirect("/dashbord/AdminCompt");
