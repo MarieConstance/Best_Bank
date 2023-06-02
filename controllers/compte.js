@@ -61,20 +61,23 @@ exports.deleteUtilisateur = async (req, res) => {
 };
 
 exports.getUpdateUserCompte = async (req, res) => {
+
   try {
-    const compte = await imgComptes.findById(req.params.id);
-    res.render("dashbord/updateCompt", { compte });
+    const id = req.params.id
+    const compte = await adminDash.findById({_id:id});
+    res.render("dashbord/updateAdmin", { compte });
   } catch (error) {
     res.status(500).send("Server error");
   }
 };
 
 exports.postUpdateUserCompte = async (req, res) => {
+  console.log("body:",req.params.id);
   try {
-    const compte = await imgComptes.findByIdAndUpdate(req.params.id, req.body, {
+    const compte = await adminDash.findByIdAndUpdate(req.params.id, req.body, {
       new: true,
     });
-    res.redirect("/dashbord/listeAdmin");
+    res.redirect("/listeAdmin");
   } catch (error) {
     res.status(500).send("Server error");
   }

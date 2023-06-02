@@ -67,7 +67,7 @@ router.get("/connexionAdmins",controllers.connexionAdmins)
 
 
 router.get('/updateComptes/:id', controller.getUpdateUserCompte);
-router.get('/update-userCompte/:id', controller.postUpdateUserCompte);
+router.post('/update-userCompte/:id', controller.postUpdateUserCompte);
 router.get("/delete/:id",controller.deleteUtilisateurs )
         
 ////route Administrateur

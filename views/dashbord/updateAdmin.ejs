@@ -50,25 +50,25 @@
         <h2 class="titreformu">*  Veillez remplir ce formulaire pour procéder à la modification du compte des Administrateurs</h2>
         <div class="login-box">
           
-          <form action="/update-adminCompte/ <%= adminDash._id %>" method="PUT">
+          <form action="/update-userCompte/<%= compte._id %>" method="POST">
             <div class="user-box">
-              <input type="text" name="name" value="<%= adminDash.name %>">
+              <input type="text" name="name" value="<%= compte.name %>">
               <label>Nom</label>
             </div>
             <div class="user-box">
-              <input type="text" name="first_name" value="<%= adminDash.first_name %>">
+              <input type="text" name="firstName" value="<%= compte.firstName %>">
               <label>Prenoms</label>
             </div>
             <div class="user-box">
-              <input type="tel" name="telephone" value="<%= adminDash.telephone %>">
+              <input type="tel" name="telephone" value="<%= compte.telephone %>">
               <label>Téléphone</label>
             </div>
             <div class="user-box">
-              <input type="email" name="email" value="<%= adminDash.email %>">
+              <input type="email" name="email" value="<%= compte.email %>">
               <label>Adresse Email</label>
             </div>
             <div class="user-box">
-              <input type="password" name="password" value="<%= adminDash.password %>">
+              <input type="password" name="password" value="<%= compte.password %>">
               <label>Mot De Passe</label>
             </div><center>
             
