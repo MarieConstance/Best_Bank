@@ -10,7 +10,7 @@ const upload=require("../middleware/multer")
 const router = express.Router();
 
 router.get("/", (req, res) => {
-  res.render("index");
+  res.render("index"); 
 });
 
 router.post("/post/inscription",controllers.inscription)
